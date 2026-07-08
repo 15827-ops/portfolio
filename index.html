@@ -382,7 +382,130 @@ font-size:38px;
 }
 
 
+/* ===========================
+   หิมะตก
+=========================== */
 
+.snow{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.snow span{
+    position:absolute;
+    top:-10px;
+    color:white;
+    opacity:.9;
+    animation:snow linear infinite;
+}
+
+@keyframes snow{
+
+0%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(110vh);
+}
+
+}
+
+/* กล่องโปรไฟล์ลอย */
+
+.profile-card{
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* หัวข้อเรืองแสง */
+
+header h1{
+
+text-shadow:
+0 0 10px white,
+0 0 25px #ff69b4;
+
+}
+
+/* พื้นหลังเคลื่อนไหว */
+
+body{
+
+background-size:200% 200%;
+
+animation:bgMove 12s ease infinite;
+
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:left top;
+}
+
+50%{
+background-position:right bottom;
+}
+
+100%{
+background-position:left top;
+}
+
+}
+
+/* การ์ด */
+
+.card{
+
+background:rgba(255,255,255,.75);
+
+backdrop-filter:blur(10px);
+
+}
+
+.card:hover{
+
+transform:
+translateY(-15px)
+scale(1.03);
+
+}
+
+.card span{
+
+transition:.3s;
+
+}
+
+.card:hover span{
+
+transform:scale(1.25);
+
+}
 </style>
 
 
