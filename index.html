@@ -1,364 +1,390 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Prompt',sans-serif;
+}
 
-<title>Portfolio | จันทกานต์ บางไธสง</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+body{
 
-<link rel="stylesheet" href="style.css">
+min-height:100vh;
 
-</head>
+background:
+linear-gradient(
+135deg,
+#ffd6e7,
+#fff0f5,
+#f8b8d0
+);
 
+overflow-x:hidden;
 
-<body>
+color:#5b3b45;
 
+}
 
-<!-- กลีบดอกไม้ตกแต่ง -->
-<div class="flower f1">🌸</div>
-<div class="flower f2">🌷</div>
-<div class="flower f3">🌸</div>
 
 
-<!-- Navigation -->
+/* Background circles */
 
-<nav>
 
-<div class="logo">
-🌸 Portfolio
-</div>
+.circle{
 
+position:absolute;
 
-<ul>
+border-radius:50%;
 
-<li><a href="#home">Home</a></li>
+filter:blur(5px);
 
-<li><a href="#profile">Profile</a></li>
+z-index:-1;
 
-<li><a href="#education">Education</a></li>
+}
 
-<li><a href="#award">Award</a></li>
 
-<li><a href="#contact">Contact</a></li>
+.one{
 
-</ul>
+width:300px;
+height:300px;
 
-</nav>
+background:#ffb6d2;
 
+top:-100px;
+left:-80px;
 
+}
 
-<!-- Hero -->
 
-<section id="home" class="hero">
 
+.two{
 
-<div class="hero-box">
+width:250px;
+height:250px;
 
+background:#ffffff;
 
-<img src="images/profile.jpg" class="profile-img">
+right:-80px;
+top:200px;
 
+}
 
-<h1>
-จันทกานต์ บางไธสง
-</h1>
 
 
-<h2>
-นักเรียนชั้นมัธยมศึกษาปีที่ 6
-</h2>
+.three{
 
+width:200px;
+height:200px;
 
-<p>
-Portfolio สำหรับนำเสนอประวัติส่วนตัว
-การศึกษา ผลงาน และความสามารถ
-</p>
+background:#f78fb3;
 
+bottom:-50px;
+left:40%;
 
-<a href="#profile" class="button">
-เข้าสู่ Portfolio
-</a>
+}
 
 
-</div>
 
 
-</section>
 
 
+nav{
 
+height:80px;
 
+display:flex;
 
-<!-- Profile -->
+justify-content:space-between;
 
-<section id="profile" class="section">
+align-items:center;
 
+padding:0 8%;
 
-<div class="glass">
 
+background:
 
-<h1>🌸 Profile</h1>
+rgba(255,255,255,.45);
 
 
-<div class="profile-content">
+backdrop-filter:blur(15px);
 
 
-<img src="images/profile.jpg">
+box-shadow:
 
+0 5px 20px rgba(0,0,0,.08);
 
-<div>
 
+}
 
-<h2>
-ประวัติส่วนตัว
-</h2>
 
 
-<p>
-ชื่อ : จันทกานต์ บางไธสง
-</p>
+.logo{
 
+font-size:25px;
 
-<p>
-ระดับการศึกษา : มัธยมศึกษาปีที่ 6
-</p>
+font-weight:600;
 
+color:#d85b88;
 
-<p>
-ความสนใจ : เทคโนโลยี การออกแบบเว็บไซต์ และการเรียนรู้สิ่งใหม่
-</p>
+}
 
 
-<p>
-งานอดิเรก : ฟังเพลง อ่านหนังสือ ออกแบบผลงาน
-</p>
 
+.nav-text{
 
-</div>
+font-size:20px;
 
+letter-spacing:3px;
 
-</div>
+}
 
 
-</div>
 
 
-</section>
 
 
 
+.hero{
 
+display:flex;
 
+justify-content:center;
 
-<!-- Education -->
+padding-top:50px;
 
-<section id="education" class="section">
+}
 
 
-<div class="glass">
 
+.profile-box{
 
-<h1>🎓 Education</h1>
+background:white;
 
+width:350px;
 
-<div class="timeline">
+padding:35px;
 
+border-radius:35px;
 
-<div class="time-card">
+text-align:center;
 
-<h3>
-ประถมศึกษา
-</h3>
 
-<p>
-โรงเรียน................................
-</p>
+box-shadow:
 
-</div>
+0 15px 35px rgba(200,100,140,.25);
 
 
+animation:up .8s ease;
 
-<div class="time-card">
+}
 
-<h3>
-มัธยมศึกษาตอนต้น
-</h3>
 
-<p>
-โรงเรียน................................
-</p>
 
-</div>
 
+.profile-box img{
 
+width:160px;
 
+height:160px;
 
-<div class="time-card">
+border-radius:50%;
 
-<h3>
-มัธยมศึกษาตอนปลาย
-</h3>
+object-fit:cover;
 
-<p>
-โรงเรียน................................
-</p>
+border:7px solid #ffd1e1;
 
-</div>
 
+}
 
-</div>
 
 
-</div>
+.profile-box h1{
 
+margin-top:20px;
 
-</section>
+color:#c85a83;
 
+}
 
 
 
 
 
 
-<!-- Award -->
+.menu{
 
-<section id="award" class="section">
 
+display:grid;
 
-<div class="glass">
+grid-template-columns:
 
+repeat(4,250px);
 
-<h1>🏆 Award & Activities</h1>
 
+gap:30px;
 
-<div class="gallery">
+justify-content:center;
 
 
-<div class="award-card">
+margin-top:60px;
 
-<img src="images/award1.jpg">
 
-<h3>
-ผลงานที่ 1
-</h3>
+}
 
-<p>
-รายละเอียดผลงาน
-</p>
 
-</div>
 
 
+.card{
 
 
-<div class="award-card">
+background:white;
 
-<img src="images/award2.jpg">
 
-<h3>
-ผลงานที่ 2
-</h3>
+height:230px;
 
-<p>
-รายละเอียดผลงาน
-</p>
 
-</div>
+border-radius:30px;
 
 
+text-decoration:none;
 
 
+color:#5b3b45;
 
-<div class="award-card">
 
-<img src="images/award3.jpg">
+display:flex;
 
-<h3>
-ผลงานที่ 3
-</h3>
 
-<p>
-รายละเอียดผลงาน
-</p>
+flex-direction:column;
 
-</div>
 
+justify-content:center;
 
 
-</div>
+align-items:center;
 
 
-</div>
 
+box-shadow:
 
-</section>
+0 15px 30px rgba(180,80,120,.18);
 
 
 
+transition:.4s;
 
 
+}
 
 
-<!-- Contact -->
 
-<section id="contact" class="section">
 
+.card:hover{
 
-<div class="glass contact">
 
+transform:
 
-<h1>
-💌 Contact
-</h1>
+translateY(-15px)
+scale(1.05);
 
 
-<p>
-📧 Email : yourmail@gmail.com
-</p>
 
+box-shadow:
 
-<p>
-📱 Phone : 08x-xxx-xxxx
-</p>
+0 25px 45px rgba(180,80,120,.35);
 
 
-<p>
-📷 Instagram : yourinstagram
-</p>
+}
 
 
-<p>
-📘 Facebook : จันทกานต์ บางไธสง
-</p>
 
+.icon{
 
-</div>
+font-size:55px;
 
+margin-bottom:15px;
 
-</section>
+}
 
 
 
+.card h2{
 
+color:#d45d89;
 
+}
 
-<footer>
 
-<p>
-© 2026 Portfolio | จันทกานต์ บางไธสง
-</p>
 
-</footer>
+.card p{
 
+margin-top:10px;
 
+}
 
 
-<script src="script.js"></script>
 
 
-</body>
-</html>
+
+footer{
+
+
+text-align:center;
+
+margin-top:70px;
+
+padding:20px;
+
+
+color:#8d5367;
+
+
+}
+
+
+
+
+
+@media(max-width:1100px){
+
+
+.menu{
+
+grid-template-columns:
+
+repeat(2,250px);
+
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.menu{
+
+grid-template-columns:
+
+1fr;
+
+padding:20px;
+
+}
+
+
+
+.card{
+
+width:90%;
+
+margin:auto;
+
+}
+
+
+
+}
