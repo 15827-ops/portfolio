@@ -4,16 +4,13 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Portfolio | จันทกานต์ บางไธสง</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
-
 
 *{
     margin:0;
@@ -22,210 +19,234 @@
     font-family:'Prompt',sans-serif;
 }
 
-
 body{
 
     min-height:100vh;
-
-    background:
-    linear-gradient(
-    135deg,
-    #ffe4ef,
-    #ffd1e3,
-    #f8a8c4
-    );
-
-    color:#633646;
-
     overflow-x:hidden;
 
-}
+    background:linear-gradient(
+    -45deg,
+    #ffe5f1,
+    #ffd3e4,
+    #f8aac7,
+    #ffdce9);
 
+    background-size:400% 400%;
 
-
-/* วงกลมตกแต่งพื้นหลัง */
-
-.bg{
-
-    position:absolute;
-
-    border-radius:50%;
-
-    filter:blur(5px);
-
-    z-index:-1;
+    animation:bg 12s ease infinite;
 
 }
 
+@keyframes bg{
 
-.bg1{
+0%{background-position:0% 50%;}
 
-    width:300px;
-    height:300px;
+50%{background-position:100% 50%;}
 
-    background:#ffffff;
-
-    top:-100px;
-    left:-80px;
+100%{background-position:0% 50%;}
 
 }
 
+/* หิมะ */
 
-.bg2{
+.snow{
 
-    width:250px;
-    height:250px;
+position:fixed;
 
-    background:#f48fb1;
+top:0;
+left:0;
 
-    right:-70px;
-    bottom:100px;
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:-1;
+
+overflow:hidden;
 
 }
 
+.snow span{
 
+position:absolute;
 
+top:-20px;
 
-/* ส่วนหัว */
+color:white;
+
+animation:snow linear infinite;
+
+}
+
+@keyframes snow{
+
+0%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(110vh);
+
+}
+
+}
+
+/* Header */
 
 header{
 
-    text-align:center;
+text-align:center;
 
-    padding:50px 20px;
+padding:50px 20px;
 
 }
-
-
 
 header h1{
 
-    font-size:50px;
+font-size:60px;
 
-    color:#c2185b;
+color:#c2185b;
 
-    letter-spacing:3px;
+text-shadow:
+0 0 15px white,
+0 0 25px pink;
+
+animation:glow 2s infinite alternate;
 
 }
 
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px white;
+
+}
+
+to{
+
+text-shadow:
+0 0 25px hotpink;
+
+}
+
+}
 
 header p{
 
-    font-size:22px;
+font-size:22px;
 
-    color:#7a4558;
+color:#7b4155;
 
 }
 
-
-
-
-
-/* กล่องข้อมูล */
+/* Profile */
 
 .profile-card{
 
+width:650px;
 
-    width:380px;
+max-width:95%;
 
-    margin:auto;
+margin:auto;
 
-    padding:35px;
+padding:45px;
 
+text-align:center;
 
-    background:
-    rgba(255,255,255,.65);
+background:rgba(255,255,255,.7);
 
+backdrop-filter:blur(12px);
 
-    backdrop-filter:blur(15px);
+border-radius:35px;
 
+box-shadow:
+0 20px 40px rgba(0,0,0,.15);
 
-    border-radius:40px;
-
-
-    text-align:center;
-
-
-    box-shadow:
-
-    0 20px 40px rgba(180,70,120,.25);
-
+animation:float 4s ease-in-out infinite;
 
 }
 
+@keyframes float{
 
+0%{
 
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
 
 .profile-card img{
 
+width:360px;
 
-    width:180px;
+height:360px;
 
-    height:180px;
+object-fit:cover;
 
-    object-fit:cover;
+border-radius:50%;
 
+border:10px solid white;
 
-    border-radius:50%;
+box-shadow:
 
+0 0 0 10px #f8bbd0,
 
-    border:10px solid #fff;
-
-
-    box-shadow:
-
-    0 0 0 8px #f8bbd0;
-
+0 20px 40px rgba(255,105,180,.35);
 
 }
-
-
 
 .profile-card h2{
 
-    margin-top:25px;
+margin-top:25px;
 
-    color:#c2185b;
+color:#c2185b;
+
+font-size:32px;
 
 }
-
-
 
 .profile-card p{
 
-    margin-top:8px;
+margin-top:10px;
+
+font-size:20px;
+
+color:#633646;
 
 }
-
-
-
-
-
-/* เมนู */
+    /* เมนู */
 
 .menu{
 
+    width:90%;
 
     margin:60px auto;
 
-
-    width:90%;
-
-
     display:grid;
 
-
-    grid-template-columns:
-
-    repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
 
     gap:30px;
 
-
 }
-
-
 
 .menu a{
 
@@ -235,114 +256,93 @@ header p{
 
 }
 
-
-
-
 .card{
 
+    background:rgba(255,255,255,.75);
 
-    height:220px;
+    backdrop-filter:blur(10px);
 
+    border-radius:30px;
 
-    background:white;
+    padding:40px;
 
-
-    border-radius:35px;
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    box-shadow:
-
-
-    0 15px 30px rgba(180,70,120,.2);
-
+    text-align:center;
 
     transition:.4s;
 
+    box-shadow:
+
+    0 15px 35px rgba(180,70,120,.25);
 
 }
-
-
-
 
 .card:hover{
 
-
     transform:
 
-    translateY(-15px);
+    translateY(-12px)
 
+    scale(1.03);
 
     box-shadow:
 
-
-    0 25px 50px rgba(180,70,120,.35);
-
+    0 25px 45px rgba(180,70,120,.35);
 
 }
-
-
 
 .card span{
 
-    font-size:55px;
+    font-size:60px;
+
+    display:block;
+
+    transition:.3s;
 
 }
 
+.card:hover span{
 
+    transform:
+
+    rotate(10deg)
+
+    scale(1.2);
+
+}
 
 .card h3{
 
-
     margin-top:15px;
-
 
     color:#c2185b;
 
-
-    font-size:22px;
-
+    font-size:24px;
 
 }
-
-
 
 .card p{
 
     margin-top:8px;
 
+    color:#633646;
+
 }
 
-
-
-
+/* Footer */
 
 footer{
 
     text-align:center;
 
-    padding:25px;
+    padding:30px;
 
     color:#8c5368;
 
 }
 
-
-
+/* Responsive */
 
 @media(max-width:900px){
-
 
 .menu{
 
@@ -350,13 +350,23 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
+.profile-card{
+
+width:90%;
 
 }
 
+.profile-card img{
 
+width:280px;
 
-@media(max-width:500px){
+height:280px;
 
+}
+
+}
+
+@media(max-width:600px){
 
 .menu{
 
@@ -364,213 +374,51 @@ grid-template-columns:1fr;
 
 }
 
-
-.profile-card{
-
-width:85%;
-
-}
-
-
 header h1{
 
-font-size:38px;
+font-size:42px;
 
 }
 
+.profile-card img{
 
-}
+width:220px;
 
+height:220px;
 
-/* ===========================
-   หิมะตก
-=========================== */
-
-.snow{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:-1;
-}
-
-.snow span{
-    position:absolute;
-    top:-10px;
-    color:white;
-    opacity:.9;
-    animation:snow linear infinite;
-}
-
-@keyframes snow{
-
-0%{
-transform:translateY(-10px);
-}
-
-100%{
-transform:translateY(110vh);
 }
 
 }
 
-/* กล่องโปรไฟล์ลอย */
-
-.profile-card{
-
-animation:float 4s ease-in-out infinite;
-
-}
-
-@keyframes float{
-
-0%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-10px);
-}
-
-100%{
-transform:translateY(0px);
-}
-
-}
-
-/* หัวข้อเรืองแสง */
-
-header h1{
-
-text-shadow:
-0 0 10px white,
-0 0 25px #ff69b4;
-
-}
-
-/* พื้นหลังเคลื่อนไหว */
-
-body{
-
-background-size:200% 200%;
-
-animation:bgMove 12s ease infinite;
-
-}
-
-@keyframes bgMove{
-
-0%{
-background-position:left top;
-}
-
-50%{
-background-position:right bottom;
-}
-
-100%{
-background-position:left top;
-}
-
-}
-
-/* การ์ด */
-
-.card{
-
-background:rgba(255,255,255,.75);
-
-backdrop-filter:blur(10px);
-
-}
-
-.card:hover{
-
-transform:
-translateY(-15px)
-scale(1.03);
-
-}
-
-.card span{
-
-transition:.3s;
-
-}
-
-.card:hover span{
-
-transform:scale(1.25);
-
-}
 </style>
-
 
 </head>
 
-
-
 <body>
 
-
-<div class="bg bg1"></div>
-
-<div class="bg bg2"></div>
-
-
-
+<div class="snow" id="snow"></div>
 
 <header>
 
-<h1>
-🌸 PORTFOLIO
-</h1>
+<h1>🌸 PORTFOLIO</h1>
 
-<p>
-จันทกานต์ บางไธสง
-</p>
-
+<p>จันทกานต์ บางไธสง</p>
 
 </header>
 
-
-
-
 <div class="profile-card">
-
 
 <img src="images/4.png">
 
+<h2>นางสาวจันทกานต์ บางไธสง</h2>
 
-<h2>
-นางสาวจันทกานต์ บางไธสง
-</h2>
+<p>นักเรียนชั้นมัธยมศึกษาปีที่ 6/1</p>
 
-
-<p>
-นักเรียนชั้นมัธยมศึกษาปีที่ 6/1
-</p>
-
-
-<p>
-โรงเรียนพานทอง
-</p>
-
+<p>โรงเรียนพานทอง</p>
 
 </div>
 
-
-
-
-
-
-
 <div class="menu">
-
-
 
 <a href="profile.html">
 
@@ -578,21 +426,13 @@ transform:scale(1.25);
 
 <span>👩🏻</span>
 
-<h3>
-Profile
-</h3>
+<h3>Profile</h3>
 
-<p>
-ประวัติส่วนตัว
-</p>
+<p>ประวัติส่วนตัว</p>
 
 </div>
 
 </a>
-
-
-
-
 
 <a href="education.html">
 
@@ -600,46 +440,26 @@ Profile
 
 <span>🎓</span>
 
-<h3>
-Education
-</h3>
+<h3>Education</h3>
 
-<p>
-ประวัติการศึกษา
-</p>
+<p>ประวัติการศึกษา</p>
 
 </div>
 
 </a>
-
-
-
-
-
-
 <a href="award.html">
 
 <div class="card">
 
 <span>🏆</span>
 
-<h3>
-Award
-</h3>
+<h3>Award</h3>
 
-<p>
-ผลงาน
-</p>
+<p>ผลงาน</p>
 
 </div>
 
 </a>
-
-
-
-
-
-
 
 <a href="contact.html">
 
@@ -647,24 +467,15 @@ Award
 
 <span>💌</span>
 
-<h3>
-Contact
-</h3>
+<h3>Contact</h3>
 
-<p>
-ช่องทางติดต่อ
-</p>
+<p>ช่องทางติดต่อ</p>
 
 </div>
 
 </a>
 
-
-
 </div>
-
-
-
 
 <footer>
 
@@ -672,7 +483,33 @@ Contact
 
 </footer>
 
+<script>
 
+// สร้างหิมะตก
+
+const snow = document.getElementById("snow");
+
+for(let i=0; i<150; i++){
+
+    let flake = document.createElement("span");
+
+    flake.innerHTML = "❄";
+
+    flake.style.left = Math.random()*100 + "%";
+
+    flake.style.fontSize = (8 + Math.random()*15) + "px";
+
+    flake.style.opacity = Math.random();
+
+    flake.style.animationDuration = (5 + Math.random()*8) + "s";
+
+    flake.style.animationDelay = Math.random()*5 + "s";
+
+    snow.appendChild(flake);
+
+}
+
+</script>
 
 </body>
 
