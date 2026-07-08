@@ -1,16 +1,369 @@
 <!DOCTYPE html>
-</html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio จันทกานต์ บางไธสง</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Tahoma", sans-serif;
+}
+
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #fce4ec,
+        #f8bbd0,
+        #f48fb1
+    );
+
+    min-height:100vh;
+    text-align:center;
+    color:#6d3b4c;
+
+}
+
+
+
+/* หัวเว็บ */
+
+header{
+
+    padding:40px 20px;
+
+}
+
+
+header h1{
+
+    color:#c2185b;
+    font-size:45px;
+    letter-spacing:2px;
+
+}
+
+
+header p{
+
+    font-size:22px;
+    margin-top:10px;
+
+}
+
+
+
+/* รูปโปรไฟล์ */
+
+.profile{
+
+    background:white;
+
+    width:350px;
+
+    margin:20px auto;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 10px 25px rgba(194,24,91,0.2);
+
+}
+
+
+
+.profile img{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid #f8bbd0;
+
+}
+
+
+
+.profile h2{
+
+    margin-top:20px;
+
+    color:#d81b60;
+
+}
+
+
+
+.profile p{
+
+    margin-top:8px;
+
+    font-size:18px;
+
+}
+
+
+
+/* เมนู */
+
+.menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#6d3b4c;
+
+}
+
+
+
+.box{
+
+    background:white;
+
+    width:220px;
+
+    height:150px;
+
+    border-radius:25px;
+
+    padding:25px;
+
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,0.15);
+
+
+    transition:.3s;
+
+}
+
+
+
+.box:hover{
+
+    transform:translateY(-10px);
+
+    background:#fff0f5;
+
+}
+
+
+
+.box h2{
+
+    font-size:40px;
+
+}
+
+
+
+.box h3{
+
+    color:#c2185b;
+
+    margin-top:10px;
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+    margin-top:50px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.4);
+
+}
+
+
+
+/* มือถือ */
+
+@media(max-width:600px){
+
+.profile{
+
+    width:85%;
+
+}
+
+
+}
+
+</style>
+
+
 </head>
-     </title>portfolio จันทกานต์ บางไธสง</title><br>
-</head>
-<body bgcolor="fce4ec">
- <a href="profile.html">ประวัติส่วนตัว</a>
- <a href="education.html">ประวัติการศึกษา</a>
- <a href="award.html">ผลงาน</a>
- <a href="contact.html">ช่องทางการติดต่อ</a>
- <img src="imges/4.png">
- <p>นางสาวจันทกานต์ บางไธสง<br>
- นักเรียนชั้นมัธยมศึกษาปีที่6/1<br>
- โรงเรียนพานทอง<br>
- </body>
+
+
+<body>
+
+
+<header>
+
+<h1>
+🌸 PORTFOLIO 🌸
+</h1>
+
+<p>
+จันทกานต์ บางไธสง
+</p>
+
+</header>
+
+
+
+
+<div class="profile">
+
+
+<img src="images/4.png">
+
+
+<h2>
+นางสาวจันทกานต์ บางไธสง
+</h2>
+
+
+<p>
+นักเรียนชั้นมัธยมศึกษาปีที่ 6/1
+</p>
+
+
+<p>
+โรงเรียนพานทอง
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="menu">
+
+
+<a href="profile.html">
+
+<div class="box">
+
+<h2>👩</h2>
+
+<h3>
+ประวัติส่วนตัว
+</h3>
+
+</div>
+
+</a>
+
+
+
+
+<a href="education.html">
+
+<div class="box">
+
+<h2>🎓</h2>
+
+<h3>
+ประวัติการศึกษา
+</h3>
+
+</div>
+
+</a>
+
+
+
+
+
+<a href="award.html">
+
+<div class="box">
+
+<h2>🏆</h2>
+
+<h3>
+ผลงาน
+</h3>
+
+</div>
+
+</a>
+
+
+
+
+
+<a href="contact.html">
+
+<div class="box">
+
+<h2>💌</h2>
+
+<h3>
+ช่องทางการติดต่อ
+</h3>
+
+</div>
+
+</a>
+
+
+
+</div>
+
+
+
+
+<footer>
+
+<p>
+© 2026 Portfolio | จันทกานต์ บางไธสง
+</p>
+
+</footer>
+
+
+</body>
+
 </html>
