@@ -1,57 +1,169 @@
-:root{
-    --bg:#FFF7FA;
-    --primary:#F8C8DC;
-    --secondary:#E8B4C8;
-    --accent:#C97C9B;
-    --white:#ffffff;
-    --text:#5A4A52;
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | จันทกานต์ บางไธสง</title>
 
-body{
-    margin:0;
-    font-family:'Prompt',sans-serif;
-    background:linear-gradient(135deg,#FFF7FA,#FFE4EC,#F8C8DC);
-    color:var(--text);
-    scroll-behavior:smooth;
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-nav{
-    background:rgba(255,255,255,.75);
-    backdrop-filter:blur(15px);
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-nav a{
-    color:var(--text);
-    font-weight:600;
-}
+<body>
 
-nav a:hover{
-    color:var(--accent);
-}
+<!-- เมนู -->
+<nav>
+    <div class="logo">
+        Portfolio
+    </div>
 
-.card{
-    background:rgba(255,255,255,.9);
-    border-radius:25px;
-    padding:35px;
-    box-shadow:0 10px 30px rgba(201,124,155,.18);
-    transition:.35s;
-}
+    <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#award">Award</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-.card:hover{
-    transform:translateY(-8px);
-}
+<!-- หน้าแรก -->
+<header class="hero">
 
-.btn{
-    background:linear-gradient(45deg,#F8C8DC,#E8B4C8);
-    color:white;
-    padding:14px 35px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 8px 20px rgba(232,180,200,.35);
-}
+    <img src="images/profile.jpg" class="profile-img">
 
-.btn:hover{
-    transform:scale(1.05);
-}
+    <h1>จันทกานต์ บางไธสง</h1>
+
+    <h3>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h3>
+
+    <p>
+        Portfolio สำหรับใช้ประกอบการสมัครเข้าศึกษาต่อระดับอุดมศึกษา
+    </p>
+
+    <a href="#profile" class="btn">
+        เริ่มต้น
+    </a>
+
+</header>
+
+<!-- Profile -->
+<section id="profile" class="card">
+
+<h2>👩 ประวัติส่วนตัว</h2>
+
+<p><strong>ชื่อ :</strong> จันทกานต์ บางไธสง</p>
+
+<p><strong>กำลังศึกษา :</strong> ชั้นมัธยมศึกษาปีที่ 6</p>
+
+<p><strong>งานอดิเรก :</strong> ฟังเพลง อ่านหนังสือ เล่นกีฬา</p>
+
+<p><strong>ความสามารถ :</strong> ใช้โปรแกรม Microsoft Office และออกแบบเว็บไซต์เบื้องต้น</p>
+
+<p><strong>เป้าหมาย :</strong> ศึกษาต่อในระดับมหาวิทยาลัย เพื่อพัฒนาความรู้และทักษะในสายที่สนใจ</p>
+
+</section>
+
+<!-- Education -->
+<section id="education" class="card">
+
+<h2>🎓 ประวัติการศึกษา</h2>
+
+<div class="timeline">
+
+<div class="box">
+
+<h3>ระดับประถมศึกษา</h3>
+
+<p>โรงเรียน................................</p>
+
+</div>
+
+<div class="box">
+
+<h3>ระดับมัธยมศึกษาตอนต้น</h3>
+
+<p>โรงเรียน................................</p>
+
+</div>
+
+<div class="box">
+
+<h3>ระดับมัธยมศึกษาตอนปลาย</h3>
+
+<p>โรงเรียน................................</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Award -->
+<section id="award" class="card">
+
+<h2>🏆 ผลงาน / เกียรติบัตร</h2>
+
+<div class="gallery">
+
+<div class="award-card">
+
+<img src="images/award1.jpg">
+
+<h3>เกียรติบัตรที่ 1</h3>
+
+<p>รายละเอียดผลงาน</p>
+
+</div>
+
+<div class="award-card">
+
+<img src="images/award2.jpg">
+
+<h3>เกียรติบัตรที่ 2</h3>
+
+<p>รายละเอียดผลงาน</p>
+
+</div>
+
+<div class="award-card">
+
+<img src="images/award3.jpg">
+
+<h3>เกียรติบัตรที่ 3</h3>
+
+<p>รายละเอียดผลงาน</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="card">
+
+<h2>📞 ช่องทางการติดต่อ</h2>
+
+<p>📧 Email : example@gmail.com</p>
+
+<p>📱 โทรศัพท์ : 08x-xxx-xxxx</p>
+
+<p>📘 Facebook : จันทกานต์ บางไธสง</p>
+
+<p>📸 Instagram : yourname</p>
+
+<p>💚 Line : yourline</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Portfolio | จันทกานต์ บางไธสง</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
