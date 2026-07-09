@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ประวัติส่วนตัว</title>
 
 <style>
@@ -15,45 +17,68 @@ font-family:"TH Sarabun New",Tahoma,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ffdbe8,#fff5fa,#ffe9f3);
+
+background:linear-gradient(135deg,#ffdbe8,#fff6fb,#ffeaf3);
+
 min-height:100vh;
+
 overflow-x:hidden;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 padding:30px;
+
 }
+
+/* กล่องหลัก */
 
 .container{
+
 width:900px;
+
 text-align:center;
+
 position:relative;
+
 z-index:2;
+
 }
 
+/* หัวข้อ */
+
 h1{
-font-size:52px;
+
 color:#ff4f96;
+
+font-size:50px;
+
 margin-bottom:20px;
+
 animation:float 3s ease-in-out infinite;
+
 }
 
 /* รูป */
 
 .photo-box{
 
-width:260px;
+width:250px;
+
 height:300px;
 
 margin:auto;
 
 background:white;
 
-border:6px solid #ffb6d9;
+padding:10px;
 
 border-radius:25px;
 
-padding:10px;
+border:5px solid #ffb6d9;
 
 position:relative;
 
@@ -69,9 +94,9 @@ width:100%;
 
 height:100%;
 
-object-fit:cover;
-
 border-radius:18px;
+
+object-fit:cover;
 
 }
 
@@ -79,11 +104,11 @@ border-radius:18px;
 
 position:absolute;
 
-top:-18px;
+top:-15px;
 
 left:-15px;
 
-font-size:35px;
+font-size:34px;
 
 }
 
@@ -91,39 +116,39 @@ font-size:35px;
 
 position:absolute;
 
-bottom:-18px;
+bottom:-15px;
 
 right:-15px;
 
-font-size:35px;
+font-size:34px;
 
 }
 
-/* กล่องสองอัน */
+/* กล่องสองฝั่ง */
 
 .content{
-
-margin-top:25px;
 
 display:flex;
 
 justify-content:center;
 
-gap:20px;
+align-items:flex-start;
 
-align-items:stretch;
+gap:35px;
+
+margin-top:25px;
 
 }
 
-/* กล่อง */
+/* กล่องข้อมูล */
 
 .card{
 
+width:500px;
+
 background:white;
 
-width:330px;
-
-padding:20px;
+padding:20px 25px;
 
 border-radius:20px;
 
@@ -145,9 +170,9 @@ font-size:34px;
 
 .card p{
 
-font-size:26px;
+font-size:25px;
 
-line-height:1.8;
+line-height:1.9;
 
 text-align:left;
 
@@ -155,13 +180,31 @@ color:#555;
 
 }
 
-/* ติดต่อ */
+/* ช่องทางการติดต่อ */
+
+.contact{
+
+width:250px;
+
+animation:float 3.5s ease-in-out infinite;
+
+}
+
+.contact h2{
+
+color:#ff4f96;
+
+margin-bottom:15px;
+
+white-space:nowrap;
+
+}
 
 .contact-grid{
 
-display:grid;
+display:flex;
 
-grid-template-columns:1fr 1fr;
+flex-direction:column;
 
 gap:12px;
 
@@ -173,11 +216,13 @@ display:block;
 
 background:#ffe6f2;
 
-padding:12px;
+padding:14px;
 
-border-radius:12px;
+border-radius:15px;
 
 text-decoration:none;
+
+text-align:center;
 
 font-size:22px;
 
@@ -201,13 +246,17 @@ transform:scale(1.05);
 
 /* ปุ่ม */
 
-button{
+.next{
 
-margin-top:20px;
+margin-top:35px;
 
-width:100%;
+}
 
-padding:12px;
+.next button{
+
+width:250px;
+
+padding:13px;
 
 font-size:22px;
 
@@ -215,7 +264,7 @@ border:none;
 
 border-radius:30px;
 
-background:#ff6da8;
+background:#ff70ad;
 
 color:white;
 
@@ -223,7 +272,7 @@ cursor:pointer;
 
 }
 
-button:hover{
+.next button:hover{
 
 background:#ff4f96;
 
@@ -253,11 +302,11 @@ transform:translateY(-8px);
 
 position:fixed;
 
-top:-40px;
-
-pointer-events:none;
+top:-30px;
 
 font-size:22px;
+
+pointer-events:none;
 
 animation:fall linear infinite;
 
@@ -269,7 +318,7 @@ z-index:1;
 
 0%{
 
-transform:translateY(-40px) rotate(0deg);
+transform:translateY(-30px) rotate(0deg);
 
 opacity:1;
 
@@ -292,6 +341,7 @@ opacity:0;
 
 <div class="container">
 
+    <!-- หัวข้อ -->
     <h1>🌸 ประวัติส่วนตัว 🌸</h1>
 
     <!-- รูปโปรไฟล์ -->
@@ -306,35 +356,34 @@ opacity:0;
 
     </div>
 
-    <!-- กล่องข้อมูลและช่องทางติดต่อ -->
+    <!-- ข้อมูล + ช่องทางการติดต่อ -->
     <div class="content">
 
-        <!-- กล่องข้อมูล -->
+        <!-- ข้อมูลส่วนตัว -->
         <div class="card">
 
             <h2>💗 ข้อมูลส่วนตัว</h2>
 
-       <p style="white-space:nowrap;">
+            <p>
 
-<b>ชื่อ :</b> นางสาว จันทกานต์ บางไธสง<br>
+                <b>ชื่อ :</b> นางสาว จันทกานต์ บางไธสง<br>
 
-</p>
+                <b>ชื่อเล่น :</b> เอย<br>
 
-<p>
+                <b>อายุ :</b> 17 ปี<br>
 
-<b>ชื่อเล่น :</b> เอย<br>
+                <b>โรงเรียน :</b> โรงเรียนพานทอง<br>
 
-<b>อายุ :</b> 17 ปี<br>
+                <b>ชั้น :</b> มัธยมศึกษาปีที่ 6/1<br>
 
-<b>โรงเรียน :</b> โรงเรียนพานทอง<br>
+                <b>งานอดิเรก :</b> ดูหนัง • ฟังเพลง • อ่านหนังสือ • ร้องเพลง
 
-<b>ชั้น :</b> มัธยมศึกษาปีที่ 6/1
+            </p>
 
-</p>
         </div>
 
-        <!-- กล่องช่องทางการติดต่อ -->
-        <div class="card">
+        <!-- ช่องทางการติดต่อ -->
+        <div class="contact">
 
             <h2>📱 ช่องทางการติดต่อ</h2>
 
@@ -358,35 +407,40 @@ opacity:0;
 
             </div>
 
-            <button onclick="location.href='page2.html'">
-                หน้าถัดไป ➜
-            </button>
-
         </div>
 
     </div>
 
-</div>
-    <script>
+    <!-- ปุ่มหน้าถัดไป -->
+    <div class="next">
 
-// สร้างดอกซากุระ
+        <button onclick="location.href='page2.html'">
+            หน้าถัดไป ➜
+        </button>
+
+    </div>
+
+</div>
+<script>
+
+// 🌸 สร้างดอกซากุระร่วง
 for(let i = 0; i < 50; i++){
 
-    const flower = document.createElement("div");
+    const sakura = document.createElement("div");
 
-    flower.className = "sakura";
+    sakura.className = "sakura";
 
-    flower.innerHTML = "🌸";
+    sakura.innerHTML = "🌸";
 
-    flower.style.left = Math.random() * 100 + "vw";
+    sakura.style.left = Math.random() * 100 + "vw";
 
-    flower.style.fontSize = (16 + Math.random() * 16) + "px";
+    sakura.style.fontSize = (16 + Math.random() * 18) + "px";
 
-    flower.style.animationDuration = (5 + Math.random() * 5) + "s";
+    sakura.style.animationDuration = (5 + Math.random() * 5) + "s";
 
-    flower.style.animationDelay = Math.random() * 5 + "s";
+    sakura.style.animationDelay = Math.random() * 5 + "s";
 
-    document.body.appendChild(flower);
+    document.body.appendChild(sakura);
 
 }
 
