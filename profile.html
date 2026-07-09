@@ -11,85 +11,138 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Tahoma,sans-serif;
+font-family:'TH Sarabun New',Tahoma,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ffdbe9,#fff3f8,#ffe8f2);
-height:100vh;
+background:linear-gradient(135deg,#ffdce9,#fff6fb,#ffeef5);
 overflow:hidden;
 display:flex;
 justify-content:center;
 align-items:center;
+min-height:100vh;
 }
 
-/* จัดวาง */
+/* กล่องหลัก */
+
 .container{
-display:flex;
-align-items:center;
-gap:35px;
+width:430px;
+text-align:center;
 z-index:2;
+animation:float 3s ease-in-out infinite;
 }
 
-/* รูปวงกลม */
-.photo img{
+@keyframes float{
+0%,100%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+
+h1{
+color:#ff5c9f;
+margin-bottom:15px;
+font-size:42px;
+}
+
+/* รูป */
+
+.photo-box{
 width:230px;
 height:230px;
-border-radius:50%;
-border:6px solid #ff9fc9;
-object-fit:cover;
-box-shadow:0 5px 20px rgba(255,105,180,.35);
+margin:auto;
+background:white;
+padding:10px;
+border-radius:25px;
+border:5px solid #ffb6d9;
+box-shadow:0 8px 20px rgba(255,105,180,.3);
+position:relative;
+animation:float 3s ease-in-out infinite;
 }
 
-/* ด้านขวา */
-.right{
-display:flex;
-flex-direction:column;
-gap:15px;
+.photo-box img{
+width:100%;
+height:100%;
+border-radius:18px;
+object-fit:cover;
+}
+
+/* แมวและดอกไม้ */
+
+.cat{
+position:absolute;
+top:-18px;
+left:-18px;
+font-size:35px;
+}
+
+.flower{
+position:absolute;
+bottom:-18px;
+right:-18px;
+font-size:35px;
 }
 
 /* กล่อง */
+
 .card{
-width:350px;
-background:#fff;
+margin-top:20px;
+background:white;
 padding:18px;
-border-radius:18px;
-box-shadow:0 5px 18px rgba(255,105,180,.25);
+border-radius:20px;
+box-shadow:0 8px 20px rgba(255,105,180,.25);
+animation:float 3.5s ease-in-out infinite;
 }
 
 .card h2{
-color:#ff4f96;
-text-align:center;
+color:#ff5c9f;
 margin-bottom:12px;
 }
 
 .card p{
-font-size:18px;
+font-size:24px;
 line-height:1.8;
-color:#444;
+text-align:left;
 }
 
-/* ลิงก์ */
-a{
-color:#ff4f96;
+/* ติดต่อ */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:15px;
+}
+
+.contact-grid a{
+display:block;
+background:#ffe7f2;
+padding:10px;
+border-radius:12px;
 text-decoration:none;
+color:#ff4f96;
 font-weight:bold;
+transition:.3s;
 }
 
-a:hover{
-text-decoration:underline;
+.contact-grid a:hover{
+background:#ffb6d9;
+color:white;
 }
 
 /* ปุ่ม */
+
 button{
-margin-top:15px;
+margin-top:18px;
 width:100%;
 padding:12px;
 border:none;
 border-radius:30px;
 background:#ff70ad;
 color:white;
-font-size:18px;
+font-size:20px;
 cursor:pointer;
 }
 
@@ -98,107 +151,9 @@ background:#ff4f96;
 }
 
 /* ซากุระ */
+
 .sakura{
 position:absolute;
-top:-50px;
-font-size:22px;
-animation:fall linear infinite;
-pointer-events:none;
-}
-
-@keyframes fall{
-0%{
-transform:translateY(-50px) rotate(0deg);
-opacity:1;
-}
-100%{
-transform:translateY(110vh) translateX(80px) rotate(360deg);
-opacity:0;
-}
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<div class="photo">
-<img src="profile.jpg" alt="Profile">
-</div>
-
-<div class="right">
-
-<div class="card">
-
-<h2>🌸 ประวัติส่วนตัว 🌸</h2>
-
-<p>
-<b>ชื่อ :</b> นางสาว จันทกานต์ บางไธสง<br>
-<b>ชื่อเล่น :</b> เอย<br>
-<b>อายุ :</b> 17 ปี<br>
-<b>โรงเรียน :</b> โรงเรียนพานทอง<br>
-<b>ชั้น :</b> มัธยมศึกษาปีที่ 6/1
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>📱 ช่องทางการติดต่อ</h2>
-
-<p>
-📷 Instagram :
-<a href="https://instagram.com/your_username" target="_blank">@your_username</a>
-<br><br>
-
-📘 Facebook :
-<a href="https://facebook.com/your_username" target="_blank">Facebook</a>
-<br><br>
-
-🎵 TikTok :
-<a href="https://www.tiktok.com/@your_username" target="_blank">@your_username</a>
-<br><br>
-
-💚 LINE :
-<a href="https://line.me/ti/p/~your_lineid" target="_blank">@your_lineid</a>
-
-</p>
-
-<button onclick="location.href='page2.html'">
-หน้าถัดไป ➜
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-for(let i=0;i<45;i++){
-
-let s=document.createElement("div");
-
-s.className="sakura";
-
-s.innerHTML="🌸";
-
-s.style.left=Math.random()*100+"vw";
-
-s.style.animationDuration=(5+Math.random()*5)+"s";
-
-s.style.animationDelay=Math.random()*5+"s";
-
-s.style.fontSize=(15+Math.random()*18)+"px";
-
-document.body.appendChild(s);
-
-}
-
-</script>
-
-</body>
-</html>
+top:-40px;
+font-size:
+  
