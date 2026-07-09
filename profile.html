@@ -8,152 +8,276 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'TH Sarabun New',Tahoma,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'TH Sarabun New',Tahoma,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ffdce9,#fff6fb,#ffeef5);
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+    background:linear-gradient(135deg,#FFD6E8,#FFF5FA,#FFEAF4);
+    overflow-x:hidden;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-
-/* กล่องหลัก */
 
 .container{
-width:430px;
-text-align:center;
-z-index:2;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{
-transform:translateY(0px);
-}
-50%{
-transform:translateY(-8px);
-}
+    width:420px;
+    text-align:center;
+    position:relative;
+    z-index:2;
 }
 
 h1{
-color:#ff5c9f;
-margin-bottom:15px;
-font-size:42px;
+    color:#ff5c9d;
+    font-size:42px;
+    margin-bottom:20px;
+    animation:float 3s ease-in-out infinite;
 }
 
 /* รูป */
 
 .photo-box{
-width:230px;
-height:230px;
-margin:auto;
-background:white;
-padding:10px;
-border-radius:25px;
-border:5px solid #ffb6d9;
-box-shadow:0 8px 20px rgba(255,105,180,.3);
-position:relative;
-animation:float 3s ease-in-out infinite;
+    width:230px;
+    height:260px;
+    margin:auto;
+    background:#fff;
+    border-radius:25px;
+    padding:10px;
+    border:5px solid #ffb6d9;
+    position:relative;
+    box-shadow:0 10px 20px rgba(255,105,180,.25);
+    animation:float 3s ease-in-out infinite;
 }
 
 .photo-box img{
-width:100%;
-height:100%;
-border-radius:18px;
-object-fit:cover;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:18px;
 }
 
-/* แมวและดอกไม้ */
+/* ตกแต่ง */
 
 .cat{
-position:absolute;
-top:-18px;
-left:-18px;
-font-size:35px;
+    position:absolute;
+    top:-18px;
+    left:-15px;
+    font-size:32px;
 }
 
-.flower{
-position:absolute;
-bottom:-18px;
-right:-18px;
-font-size:35px;
+.tulip{
+    position:absolute;
+    bottom:-18px;
+    right:-15px;
+    font-size:32px;
 }
 
-/* กล่อง */
+/* กล่องข้อความ */
 
 .card{
-margin-top:20px;
-background:white;
-padding:18px;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(255,105,180,.25);
-animation:float 3.5s ease-in-out infinite;
+    margin-top:20px;
+    background:#fff;
+    border-radius:20px;
+    padding:18px;
+    box-shadow:0 10px 20px rgba(255,105,180,.20);
+    animation:float 3.5s ease-in-out infinite;
 }
 
 .card h2{
-color:#ff5c9f;
-margin-bottom:12px;
+    color:#ff5c9d;
+    margin-bottom:10px;
 }
 
 .card p{
-font-size:24px;
-line-height:1.8;
-text-align:left;
+    font-size:24px;
+    line-height:1.8;
+    text-align:left;
+    color:#555;
 }
 
-/* ติดต่อ */
+/* ช่องทางติดต่อ */
 
 .contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-margin-top:15px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:10px;
 }
 
 .contact-grid a{
-display:block;
-background:#ffe7f2;
-padding:10px;
-border-radius:12px;
-text-decoration:none;
-color:#ff4f96;
-font-weight:bold;
-transition:.3s;
+    display:block;
+    background:#ffe8f3;
+    color:#ff4f96;
+    text-decoration:none;
+    padding:12px;
+    border-radius:12px;
+    transition:.3s;
+    font-size:20px;
 }
 
 .contact-grid a:hover{
-background:#ffb6d9;
-color:white;
+    background:#ffb6d9;
+    color:white;
 }
 
 /* ปุ่ม */
 
 button{
-margin-top:18px;
-width:100%;
-padding:12px;
-border:none;
-border-radius:30px;
-background:#ff70ad;
-color:white;
-font-size:20px;
-cursor:pointer;
+    width:100%;
+    margin-top:18px;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#ff70ad;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
 }
 
 button:hover{
-background:#ff4f96;
+    background:#ff4f96;
+}
+
+/* ลอยขึ้นลง */
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
 }
 
 /* ซากุระ */
 
 .sakura{
-position:absolute;
-top:-40px;
-font-size:
-  
+position:fixed;
+top:-30px;
+font-size:22px;
+animation:fall linear infinite;
+pointer-events:none;
+z-index:1;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-30px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) translateX(80px) rotate(360deg);
+opacity:0;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🌸 ประวัติส่วนตัว 🌸</h1>
+
+    <!-- รูปโปรไฟล์ -->
+    <div class="photo-box">
+
+        <span class="cat">🐱</span>
+
+        <!-- เปลี่ยน profile.jpg เป็นชื่อรูปของคุณ -->
+        <img src="profile.jpg" alt="Profile">
+
+        <span class="tulip">🌷</span>
+
+    </div>
+
+    <!-- กล่องข้อมูล -->
+    <div class="card">
+
+        <h2>ข้อมูลส่วนตัว</h2>
+
+        <p>
+
+        <b>ชื่อ :</b> นางสาว จันทกานต์ บางไธสง<br>
+
+        <b>ชื่อเล่น :</b> เอย<br>
+
+        <b>อายุ :</b> 17 ปี<br>
+
+        <b>โรงเรียน :</b> โรงเรียนพานทอง<br>
+
+        <b>ชั้น :</b> มัธยมศึกษาปีที่ 6/1
+
+        </p>
+
+    </div>
+
+    <!-- กล่องช่องทางการติดต่อ -->
+    <div class="card">
+
+        <h2>📱 ช่องทางการติดต่อ</h2>
+
+        <div class="contact-grid">
+
+            <a href="https://instagram.com/your_username" target="_blank">
+                📷 Instagram
+            </a>
+
+            <a href="https://facebook.com/your_username" target="_blank">
+                📘 Facebook
+            </a>
+
+            <a href="https://www.tiktok.com/@your_username" target="_blank">
+                🎵 TikTok
+            </a>
+
+            <a href="https://line.me/ti/p/~your_lineid" target="_blank">
+                💚 LINE
+            </a>
+
+        </div>
+
+        <button onclick="location.href='page2.html'">
+            หน้าถัดไป ➜
+        </button>
+
+    </div>
+
+</div>
+<script>
+
+// สร้างดอกซากุระ
+for(let i = 0; i < 50; i++){
+
+    let sakura = document.createElement("div");
+
+    sakura.className = "sakura";
+
+    sakura.innerHTML = "🌸";
+
+    sakura.style.left = Math.random() * 100 + "vw";
+
+    sakura.style.fontSize = (15 + Math.random() * 18) + "px";
+
+    sakura.style.animationDuration = (5 + Math.random() * 6) + "s";
+
+    sakura.style.animationDelay = Math.random() * 5 + "s";
+
+    document.body.appendChild(sakura);
+
+}
+
+</script>
+
+</body>
+</html>
