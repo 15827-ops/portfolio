@@ -6,148 +6,127 @@
 <title>ประวัติส่วนตัว</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"TH Sarabun New",sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Tahoma",sans-serif;
 }
 
 body{
-height:100vh;
-overflow:hidden;
-background:linear-gradient(135deg,#ffd6e8,#ffeaf5,#fff7fb);
-display:flex;
-justify-content:center;
-align-items:center;
+    background:linear-gradient(135deg,#ffd9e8,#fff0f7,#ffe4ef);
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-/* กล่องหลัก */
-
+/* พื้นที่หลัก */
 .container{
-display:flex;
-gap:40px;
-align-items:center;
-z-index:5;
+    display:flex;
+    gap:30px;
+    align-items:center;
+    z-index:2;
 }
 
-/* รูป */
-
+/* กล่องรูป */
 .photo-box{
-width:420px;
-height:420px;
-background:white;
-border-radius:30px;
-display:flex;
-justify-content:center;
-align-items:center;
-box-shadow:0 10px 25px rgba(255,105,180,.3);
+    width:280px;
+    height:380px;
+    background:#fff;
+    border-radius:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(255,105,180,.25);
 }
 
 .photo-box img{
-width:330px;
-height:330px;
-border-radius:50%;
-object-fit:cover;
-border:8px solid #ffb6d9;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #ffb6d9;
 }
 
 /* ด้านขวา */
-
 .right{
-display:flex;
-flex-direction:column;
-gap:20px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
-/* กล่องข้อความ */
-
-.info{
-width:470px;
-background:white;
-padding:25px;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(255,105,180,.3);
+/* กล่องข้อมูล */
+.card{
+    width:420px;
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(255,105,180,.25);
 }
 
-.info h2{
-text-align:center;
-color:#ff4f9c;
-margin-bottom:15px;
-font-size:35px;
+.card h2{
+    text-align:center;
+    color:#ff4f96;
+    margin-bottom:15px;
 }
 
-.info p{
-font-size:28px;
-line-height:1.7;
-color:#555;
+.card p{
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
 }
 
-/* กล่องติดต่อ */
-
-.contact{
-width:470px;
-background:white;
-padding:25px;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(255,105,180,.3);
+/* ลิงก์ */
+.contact a{
+    color:#ff4f96;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.contact h2{
-text-align:center;
-color:#ff4f9c;
-margin-bottom:15px;
-font-size:35px;
-}
-
-.contact p{
-font-size:28px;
-line-height:2;
-color:#555;
+.contact a:hover{
+    text-decoration:underline;
 }
 
 /* ปุ่ม */
-
 button{
-margin-top:20px;
-padding:12px 30px;
-font-size:22px;
-border:none;
-border-radius:30px;
-background:#ff7eb3;
-color:white;
-cursor:pointer;
-transition:.3s;
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#ff7eb3;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
 }
 
 button:hover{
-background:#ff4f96;
-transform:scale(1.05);
+    background:#ff5f9c;
+    transform:scale(1.03);
 }
 
 /* ซากุระ */
-
 .sakura{
-position:absolute;
-top:-50px;
-font-size:22px;
-animation:fall linear infinite;
-pointer-events:none;
+    position:absolute;
+    top:-50px;
+    font-size:22px;
+    animation:fall linear infinite;
+    pointer-events:none;
 }
 
 @keyframes fall{
-0%{
-transform:translateY(-50px) rotate(0deg);
-opacity:1;
+    0%{
+        transform:translateY(-50px) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(110vh) translateX(80px) rotate(360deg);
+        opacity:0;
+    }
 }
-
-100%{
-transform:translateY(110vh) translateX(80px) rotate(360deg);
-opacity:0;
-}
-}
-
 </style>
 
 </head>
@@ -156,71 +135,84 @@ opacity:0;
 
 <div class="container">
 
-<div class="photo-box">
-<img src="profile.jpg" alt="Profile">
-</div>
+    <!-- รูป -->
+    <div class="photo-box">
+        <!-- เปลี่ยน profile.jpg เป็นรูปของคุณ -->
+        <img src="profile.jpg" alt="Profile">
+    </div>
 
-<div class="right">
+    <!-- ข้อมูล -->
+    <div class="right">
 
-<div class="info">
+        <div class="card">
+            <h2>🌸 ประวัติส่วนตัว 🌸</h2>
 
-<h2>🌸 ประวัติส่วนตัว 🌸</h2>
+            <p>
+            <b>ชื่อ :</b> นางสาว จันทกานต์ บางไธสง<br>
+            <b>ชื่อเล่น :</b> เอย<br>
+            <b>อายุ :</b> 17 ปี<br>
+            <b>โรงเรียน :</b> โรงเรียนพานทอง<br>
+            <b>ชั้น :</b> มัธยมศึกษาปีที่ 6/1<br>
+            <b>งานอดิเรก :</b><br>
+            📚 อ่านนิยาย<br>
+            🎬 ดูหนัง<br>
+            🎧 ฟังเพลง<br>
+            🎮 เล่นเกม
+            </p>
 
-<p>
-<b>ชื่อ :</b> นางสาว จันทกานต์ บางไธสง<br>
-<b>ชื่อเล่น :</b> เอย<br>
-<b>อายุ :</b> 17 ปี<br>
-<b>กำลังศึกษา :</b> โรงเรียนพานทอง<br>
-<b>ชั้น :</b> มัธยมศึกษาปีที่ 6/1<br>
-<b>งานอดิเรก :</b><br>
-อ่านนิยาย • ดูหนัง • ฟังเพลง • เล่นเกม
-</p>
+        </div>
 
-</div>
+        <div class="card contact">
+            <h2>📱 ช่องทางการติดต่อ</h2>
 
-<div class="contact">
+            <p>
+            📷 Instagram :
+            <a href="https://instagram.com/your_username" target="_blank">
+            @your_username
+            </a><br><br>
 
-<h2>📱 ช่องทางการติดต่อ</h2>
+            📘 Facebook :
+            <a href="https://facebook.com/your_username" target="_blank">
+            Facebook ของฉัน
+            </a><br><br>
 
-<p>
-📷 Instagram : your_instagram<br>
-📘 Facebook : your_facebook<br>
-🎵 TikTok : your_tiktok<br>
-💚 LINE : your_line
-</p>
+            🎵 TikTok :
+            <a href="https://www.tiktok.com/@your_username" target="_blank">
+            @your_username
+            </a><br><br>
 
-<center>
-<button onclick="location.href='page2.html'">
-หน้าถัดไป ➜
-</button>
-</center>
+            💚 LINE :
+            <a href="https://line.me/ti/p/~your_lineid" target="_blank">
+            @your_lineid
+            </a>
+            </p>
 
-</div>
+            <button onclick="location.href='page2.html'">
+                หน้าถัดไป ➜
+            </button>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
 <script>
 
-for(let i=0;i<50;i++){
+// สร้างดอกซากุระ
+for(let i=0;i<45;i++){
 
-let sakura=document.createElement("div");
+    let flower=document.createElement("div");
 
-sakura.className="sakura";
+    flower.className="sakura";
+    flower.innerHTML="🌸";
 
-sakura.innerHTML="🌸";
+    flower.style.left=Math.random()*100+"vw";
+    flower.style.fontSize=(15+Math.random()*18)+"px";
+    flower.style.animationDuration=(5+Math.random()*5)+"s";
+    flower.style.animationDelay=Math.random()*5+"s";
 
-sakura.style.left=Math.random()*100+"vw";
-
-sakura.style.animationDuration=5+Math.random()*5+"s";
-
-sakura.style.animationDelay=Math.random()*5+"s";
-
-sakura.style.fontSize=15+Math.random()*20+"px";
-
-document.body.appendChild(sakura);
-
+    document.body.appendChild(flower);
 }
 
 </script>
