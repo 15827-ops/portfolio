@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ประวัติการศึกษา</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"TH Sarabun New",Tahoma,sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#ffd6e7,#ffeef6,#fff7fb);
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+    padding:40px 20px;
+}
+/* หิมะตก */
+.snow{
+    position:fixed;
+    top:-20px;
+    color:white;
+    font-size:18px;
+    animation:fall linear infinite;
+    z-index:0;
+    pointer-events:none;
+}
+@keyframes fall{
+    0%{
+        transform:translateY(-20px);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+/* กล่องหลัก */
+.container{
+    max-width:950px;
+    margin:auto;
+    position:relative;
+    z-index:1;
+}
+/* หัวข้อ */
+h1{
+    text-align:center;
+    color:#ff4f96;
+    font-size:56px;
+    margin-bottom:35px;
+    text-shadow:2px 2px 5px rgba(255,255,255,.8);
+}
+/* การ์ด */
+.edu-card{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:white;
+    border:5px solid #ffb6d9;
+    border-radius:30px;
+    padding:25px;
+    margin-bottom:30px;
+    box-shadow:0 10px 20px rgba(255,105,180,.2);
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+.edu-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 25px rgba(255,105,180,.3);
+}
+/* ตกแต่งกระต่ายและดอกไม้ */
+.edu-card::before{
+    content:"🐰";
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:40px;
+}
+.edu-card::after{
+    content:"🌸 🌷 🌼";
+    position:absolute;
+    bottom:10px;
+    right:20px;
+    font-size:24px;
+}
+/* วงกลมโลโก้ */
+.logo{
+    width:150px;
+    height:150px;
+    min-width:150px;
+    border-radius:50%;
+    background:#fff0f6;
+    border:5px solid #ff9ec8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    box-shadow:0 5px 10px rgba(255,105,180,.2);
+}
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* เนื้อหา */
+.info{
+    text-align:left;
+}
+.info h2{
+    color:#ff4f96;
+    font-size:38px;
+    margin-bottom:10px;
+}
+.info p{
+    font-size:28px;
+    line-height:1.8;
+    color:#555;
+}
+/* ลำดับ */
+.number{
+    position:absolute;
+    left:-15px;
+    top:-15px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#ff70ad;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 5px 10px rgba(255,105,180,.3);
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>🎓 ประวัติการศึกษา 🎓</h1>
+    <!-- ช่องที่ 1 -->
+    <div class="edu-card">
+        <div class="number">1</div>
+        <div class="logo">
+            <!-- ใส่โลโก้โรงเรียน -->
+            <img src="images/school1.png" alt="โรงเรียนที่ 1">
+        </div>
+        <div class="info">
+            <h2>ระดับประถมศึกษา</h2>
+            <p>
+                โรงเรียน.......................................<br>
+                สำเร็จการศึกษาระดับประถมศึกษา
+            </p>
+        </div>
+    </div>
+    <!-- ช่องที่ 2 -->
+    <div class="edu-card">
+        <div class="number">2</div>
+        <div class="logo">
+            <img src="images/school2.png" alt="โรงเรียนที่ 2">
+        </div>
+        <div class="info">
+            <h2>ระดับมัธยมศึกษาตอนต้น</h2>
+            <p>
+                โรงเรียน.......................................<br>
+                สำเร็จการศึกษาระดับมัธยมศึกษาตอนต้น
+            </p>
+        </div>
+    </div>
+    <!-- ช่องที่ 3 -->
+    <div class="edu-card">
+        <div class="number">3</div>
+        <div class="logo">
+            <img src="images/school3.png" alt="โรงเรียนที่ 3">
+        </div>
+        <div class="info">
+            <h2>ระดับมัธยมศึกษาตอนปลาย</h2>
+            <p>
+                โรงเรียนพานทอง<br>
+                กำลังศึกษาระดับมัธยมศึกษาปีที่ 6/1
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+// สร้างหิมะตก
+for(let i=0;i<80;i++){
+    const snow=document.createElement("div");
+    snow.className="snow";
+    snow.innerHTML="❄";
+    snow.style.left=Math.random()*100+"vw";
+    snow.style.fontSize=(10+Math.random()*18)+"px";
+    snow.style.animationDuration=(5+Math.random()*5)+"s";
+    snow.style.animationDelay=Math.random()*5+"s";
+    document.body.appendChild(snow);
+}
+</script>
+</body>
+</html>
