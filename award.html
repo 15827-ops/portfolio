@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผลงาน</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"TH Sarabun New",Tahoma,sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#ffdbe8,#fff6fb,#ffeaf3);
+    min-height:100vh;
+    overflow-x:hidden;
+    padding:40px 20px;
+    position:relative;
+}
+/* ดอกซากุระ */
+.sakura{
+    position:fixed;
+    top:-30px;
+    font-size:22px;
+    pointer-events:none;
+    animation:fall linear infinite;
+    z-index:0;
+}
+@keyframes fall{
+0%{
+    transform:translateY(-30px) rotate(0deg);
+    opacity:1;
+}
+100%{
+    transform:translateY(110vh) translateX(70px) rotate(360deg);
+    opacity:0;
+}
+}
+/* กล่องหลัก */
+.container{
+    max-width:1100px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+/* หัวข้อ */
+h1{
+    text-align:center;
+    color:#ff4f96;
+    font-size:60px;
+    margin-bottom:40px;
+    animation:float 3s ease-in-out infinite;
+}
+/* ตาราง */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+/* การ์ด */
+.card{
+    background:white;
+    border:5px solid #ffb6d9;
+    border-radius:30px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(255,105,180,.25);
+    position:relative;
+    animation:float 4s ease-in-out infinite;
+}
+/* กระต่าย แมว */
+.card::before{
+    content:"🐰";
+    position:absolute;
+    top:12px;
+    left:15px;
+    font-size:34px;
+}
+.card::after{
+    content:"🐱🌸";
+    position:absolute;
+    top:12px;
+    right:15px;
+    font-size:30px;
+}
+/* กรอบรูป */
+.photo{
+    width:100%;
+    height:280px;
+    border:4px dashed #ff9ec8;
+    border-radius:20px;
+    overflow:hidden;
+    background:#fff5fa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:18px;
+}
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* ข้อความ */
+.card p{
+    font-size:28px;
+    color:#555;
+    line-height:1.6;
+}
+/* ปุ่ม */
+.next{
+    display:flex;
+    justify-content:center;
+    margin-top:45px;
+}
+.next button{
+    width:260px;
+    padding:15px;
+    border:none;
+    border-radius:35px;
+    background:#ff70ad;
+    color:white;
+    font-size:26px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 18px rgba(255,105,180,.3);
+}
+.next button:hover{
+    background:#ff4f96;
+    transform:scale(1.05);
+}
+/* ลอย */
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+}
+/* มือถือ */
+@media(max-width:768px){
+.grid{
+grid-template-columns:1fr;
+}
+.photo{
+height:220px;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🏆 ผลงาน 🏆</h1>
+<div class="grid">
+<!-- ผลงาน 1 -->
+<div class="card">
+<div class="photo">
+<img src="images/award1.jpg" alt="เกียรติบัตร 1">
+</div>
+<p>
+<b>ผลงานที่ 1</b><br>
+พิมพ์รายละเอียดของเกียรติบัตรหรือผลงานที่นี่
+</p>
+</div>
+<!-- ผลงาน 2 -->
+<div class="card">
+<div class="photo">
+<img src="images/award2.jpg" alt="เกียรติบัตร 2">
+</div>
+<p>
+<b>ผลงานที่ 2</b><br>
+พิมพ์รายละเอียดของเกียรติบัตรหรือผลงานที่นี่
+</p>
+</div>
+<!-- ผลงาน 3 -->
+<div class="card">
+<div class="photo">
+<img src="images/award3.jpg" alt="เกียรติบัตร 3">
+</div>
+<p>
+<b>ผลงานที่ 3</b><br>
+พิมพ์รายละเอียดของเกียรติบัตรหรือผลงานที่นี่
+</p>
+</div>
+<!-- ผลงาน 4 -->
+<div class="card">
+<div class="photo">
+<img src="images/award4.jpg" alt="เกียรติบัตร 4">
+</div>
+<p>
+<b>ผลงานที่ 4</b><br>
+พิมพ์รายละเอียดของเกียรติบัตรหรือผลงานที่นี่
+</p>
+</div>
+</div>
+<!-- ปุ่ม -->
+<div class="next">
+<button onclick="location.href='contact.html'">
+🌸 หน้าถัดไป ➜
+</button>
+</div>
+</div>
+<script>
+/* ดอกซากุระ */
+for(let i=0;i<80;i++){
+let sakura=document.createElement("div");
+sakura.className="sakura";
+sakura.innerHTML="🌸";
+sakura.style.left=Math.random()*100+"vw";
+sakura.style.fontSize=(16+Math.random()*18)+"px";
+sakura.style.animationDuration=(5+Math.random()*5)+"s";
+sakura.style.animationDelay=Math.random()*5+"s";
+document.body.appendChild(sakura);
+}
+</script>
+</body>
+</html>
