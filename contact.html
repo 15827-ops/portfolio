@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ช่องทางการติดต่อ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Mali',cursive;
+}
+
+body{
+    overflow-x:hidden;
+    min-height:100vh;
+    background:linear-gradient(180deg,#ffd6ec,#ffeaf5,#fff7fb);
+    position:relative;
+}
+
+/* หิมะ */
+.snow{
+    position:fixed;
+    top:-10px;
+    width:8px;
+    height:8px;
+    background:white;
+    border-radius:50%;
+    opacity:.8;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+
+/* หัวข้อ */
+h1{
+    text-align:center;
+    margin-top:40px;
+    color:#ff4f93;
+    font-size:42px;
+    text-shadow:2px 2px white;
+}
+
+/* กระต่าย */
+.rabbit{
+    text-align:center;
+    font-size:70px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+/* กล่อง */
+.container{
+    width:90%;
+    max-width:700px;
+    margin:30px auto;
+}
+
+.card{
+    background:white;
+    margin:20px 0;
+    border-radius:25px;
+    padding:22px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(255,153,204,.35);
+    transition:.35s;
+    border:3px solid #ffd0e6;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card:active{
+    transform:translateY(6px);
+}
+
+.card a{
+    text-decoration:none;
+    color:#ff4f93;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.icon{
+    font-size:45px;
+    display:block;
+    margin-bottom:10px;
+}
+
+/* ปุ่ม */
+.home{
+    display:block;
+    width:220px;
+    margin:45px auto;
+    text-align:center;
+    text-decoration:none;
+    background:#ff8fbe;
+    color:white;
+    padding:15px;
+    border-radius:40px;
+    font-size:20px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 6px 15px rgba(255,105,180,.4);
+}
+
+.home:hover{
+    background:#ff5ea3;
+    transform:scale(1.05);
+}
+
+.footer{
+    text-align:center;
+    color:#ff75aa;
+    margin-bottom:25px;
+    font-size:18px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="rabbit">🐰🎀</div>
+
+<h1>ช่องทางการติดต่อ</h1>
+
+<div class="container">
+
+<div class="card">
+<span class="icon">📘</span>
+<a href="https://www.facebook.com/" target="_blank">
+Facebook
+</a>
+</div>
+
+<div class="card">
+<span class="icon">📷</span>
+<a href="https://www.instagram.com/" target="_blank">
+Instagram
+</a>
+</div>
+
+<div class="card">
+<span class="icon">💚</span>
+<a href="https://line.me/" target="_blank">
+LINE
+</a>
+</div>
+
+<div class="card">
+<span class="icon">🎵</span>
+<a href="https://www.tiktok.com/" target="_blank">
+TikTok
+</a>
+</div>
+
+</div>
+
+<a href="index.html" class="home">
+🏠 กลับหน้าหลัก
+</a>
+
+<div class="footer">
+🐰 Thank you for visiting my website 💕
+</div>
+
+<script>
+// สร้างหิมะ
+for(let i=0;i<80;i++){
+
+let snow=document.createElement("div");
+
+snow.className="snow";
+
+snow.style.left=Math.random()*100+"vw";
+
+snow.style.animationDuration=(4+Math.random()*6)+"s";
+
+snow.style.opacity=Math.random();
+
+snow.style.width=snow.style.height=(4+Math.random()*8)+"px";
+
+snow.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(snow);
+
+}
+</script>
+
+</body>
+</html>
