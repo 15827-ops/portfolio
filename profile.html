@@ -1,135 +1,144 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ประวัติส่วนตัว | Portfolio</title>
+<title>ประวัติส่วนตัว</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"TH Sarabun New",Tahoma,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"TH Sarabun New",Tahoma,sans-serif;
 }
 
 body{
-    min-height:100vh;
-    background:linear-gradient(
-        135deg,
-        #fff8fb,
-        #ffeef5,
-        #ffe4ef
-    );
-    overflow-x:hidden;
-    padding:40px 20px;
+
+background:linear-gradient(135deg,#fff9fc,#ffeef6,#ffe3ef);
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+padding:100px 20px 40px;
+
 }
 
-/* ซากุระ */
+/* ดอกซากุระ */
 
 .sakura{
-    position:fixed;
-    top:-30px;
-    font-size:22px;
-    pointer-events:none;
-    animation:fall linear infinite;
-    z-index:1;
+
+position:fixed;
+
+top:-30px;
+
+font-size:22px;
+
+pointer-events:none;
+
+animation:fall linear infinite;
+
+z-index:1;
+
 }
 
 @keyframes fall{
 
-    0%{
-        transform:translateY(-30px) rotate(0deg);
-        opacity:1;
-    }
+0%{
 
-    100%{
-        transform:translateY(110vh)
-        translateX(70px)
-        rotate(360deg);
-        opacity:0;
-    }
+transform:translateY(-30px) rotate(0deg);
+
+opacity:1;
 
 }
 
-/* กล่องหลัก */
+100%{
+
+transform:translateY(110vh)
+translateX(70px)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* กล่องใหญ่ */
 
 .container{
-    max-width:900px;
-    margin:auto;
-    position:relative;
-    z-index:2;
+
+max-width:1100px;
+
+margin:auto;
+
+position:relative;
+
+z-index:2;
+
 }
 
-/* การ์ดหลัก */
+/* การ์ด */
 
 .profile-card{
 
-    background:rgba(255,255,255,.82);
+background:rgba(255,255,255,.82);
 
-    backdrop-filter:blur(12px);
+backdrop-filter:blur(12px);
 
-    border:1px solid rgba(255,255,255,.8);
+border-radius:45px;
 
-    border-radius:40px;
+padding:180px 40px 40px;
 
-    padding:130px 50px 50px;
+box-shadow:0 18px 45px rgba(255,182,213,.28);
 
-    box-shadow:
-    0 15px 40px rgba(255,182,213,.25);
+border:2px solid rgba(255,255,255,.8);
 
-    position:relative;
-
-    transition:.4s;
+position:relative;
 
 }
 
-.profile-card:hover{
-
-    transform:translateY(-6px);
-
-}
-
-/* รูปโปรไฟล์ */
+/* รูป */
 
 .profile-img{
 
-    position:absolute;
+position:absolute;
 
-    top:-90px;
+top:-110px;
 
-    left:50%;
+left:50%;
 
-    transform:translateX(-50%);
+transform:translateX(-50%);
 
-    width:180px;
+width:230px;
 
-    height:180px;
+height:230px;
 
-    border-radius:50%;
+border-radius:50%;
 
-    background:white;
+padding:8px;
 
-    padding:8px;
+background:white;
 
-    border:5px solid #ffc7df;
+border:6px solid #ffb9d8;
 
-    box-shadow:
-    0 10px 25px rgba(255,105,180,.25);
+box-shadow:0 12px 30px rgba(255,105,180,.25);
 
 }
 
 .profile-img img{
 
-    width:100%;
+width:100%;
 
-    height:100%;
+height:100%;
 
-    border-radius:50%;
+border-radius:50%;
 
-    object-fit:cover;
+object-fit:cover;
 
 }
 
@@ -137,301 +146,424 @@ body{
 
 .name{
 
-    text-align:center;
+text-align:center;
 
-    color:#ff4f96;
+font-size:60px;
 
-    font-size:48px;
+font-weight:bold;
 
-    font-weight:bold;
+color:#ff4f96;
+
+margin-top:10px;
 
 }
 
 .school{
 
-    text-align:center;
+text-align:center;
 
-    color:#777;
+font-size:33px;
 
-    font-size:28px;
+color:#666;
 
-    margin-top:8px;
+margin-top:8px;
 
-    margin-bottom:30px;
+line-height:1.5;
+
+}
+
+/* เส้น */
+
+.line{
+
+margin:35px 0;
+
+height:2px;
+
+background:#ffd7e7;
+
+}
+
+/* แถว */
+
+.row{
+
+display:flex;
+
+gap:25px;
+
+margin-bottom:25px;
+
+}
+
+.box{
+
+flex:1;
+
+background:rgba(255,255,255,.72);
+
+border-radius:30px;
+
+padding:25px;
+
+border:1px solid #ffe0ee;
+
+box-shadow:0 8px 18px rgba(255,182,213,.15);
 
 }
 
 /* หัวข้อ */
 
-.section-title{
+.title{
 
-    display:inline-block;
+display:inline-block;
 
-    background:#ffd4e8;
+padding:8px 22px;
 
-    color:#ff4f96;
+border-radius:30px;
 
-    padding:8px 25px;
+background:#ffb7d5;
 
-    border-radius:30px;
+color:white;
 
-    font-size:30px;
+font-size:30px;
 
-    font-weight:bold;
+font-weight:bold;
 
-    margin-bottom:18px;
-
-}
-
-/* เส้นแบ่ง */
-
-.divider{
-
-    width:100%;
-
-    height:2px;
-
-    background:#ffe1ee;
-
-    margin:25px 0;
-
-    border-radius:20px;
+margin-bottom:20px;
 
 }
 
-/* เนื้อหา */
+/* ข้อความ */
 
-.info{
+.box p{
 
-    font-size:29px;
+font-size:28px;
 
-    color:#555;
+line-height:1.9;
 
-    line-height:2;
-
-}
-
-.info-center{
-
-    text-align:center;
-
-    font-size:30px;
-
-    color:#555;
-
-    line-height:1.8;
+color:#555;
 
 }
 
 /* ปุ่ม */
 
-.btn-box{
+.btn-area{
 
-    text-align:center;
+text-align:center;
 
-    margin-top:40px;
+margin-top:35px;
 
 }
 
 .btn{
 
-    width:250px;
+width:260px;
 
-    height:60px;
+height:60px;
 
-    border:none;
+border:none;
 
-    border-radius:35px;
+border-radius:35px;
 
-    background:#ff79b3;
+background:#ff75b0;
 
-    color:white;
+color:white;
 
-    font-size:28px;
+font-size:28px;
 
-    cursor:pointer;
+cursor:pointer;
 
-    transition:.3s;
+transition:.3s;
 
 }
 
 .btn:hover{
 
-    background:#ff4f96;
+background:#ff4f96;
 
-    transform:scale(1.05);
+transform:scale(1.05);
 
 }
 
 /* มือถือ */
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+.row{
+
+flex-direction:column;
+
+}
 
 .profile-card{
 
-padding:120px 25px 40px;
+padding:170px 25px 35px;
+
+}
+
+.profile-img{
+
+width:200px;
+
+height:200px;
+
+top:-95px;
 
 }
 
 .name{
 
-font-size:38px;
+font-size:48px;
 
 }
 
 .school{
 
-font-size:24px;
+font-size:28px;
 
 }
 
-.info{
+.box p{
 
 font-size:25px;
-
-}
-
-.info-center{
-
-font-size:25px;
-
-}
-
-.section-title{
-
-font-size:26px;
 
 }
 
 }
 
 </style>
+
 </head>
+
     <body>
 
-<!-- กล่องหลัก -->
 <div class="container">
 
-    <div class="profile-card">
+<div class="profile-card">
 
-        <!-- รูปโปรไฟล์ -->
-        <div class="profile-img">
-            <img src="images/IMG_5994.jpeg" alt="Profile">
-        </div>
+<!-- รูปโปรไฟล์ -->
 
-        <!-- ชื่อ -->
-        <div class="name">
-            🌸 นางสาว จันทกานต์ บางไธสง 🌸
-        </div>
+<div class="profile-img">
 
-        <div class="school">
-            นักเรียนชั้นมัธยมศึกษาปีที่ 6/1 <br>
-            โรงเรียนพานทอง
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- ข้อมูลส่วนตัว -->
-        <div class="section-title">
-            👩 ข้อมูลส่วนตัว
-        </div>
-
-        <div class="info">
-            <b>ชื่อเล่น :</b> เอย <br>
-            <b>อายุ :</b> 17 ปี <br>
-            <b>วันเกิด :</b> 24 มกราคม 2552
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- แนะนำตัว -->
-        <div class="section-title">
-            💗 แนะนำตัว
-        </div>
-
-        <div class="info">
-            ดิฉันเป็นผู้ที่มีความรับผิดชอบ มีความอดทน
-            ใส่ใจผู้อื่น และพร้อมเรียนรู้สิ่งใหม่ ๆ อยู่เสมอ
-            มีความมุ่งมั่นที่จะศึกษาต่อใน
-            <b>คณะพยาบาลศาสตร์</b>
-            เพื่อพัฒนาความรู้ ความสามารถ และทักษะในการดูแลผู้ป่วย
-            ด้วยความเมตตา จรรยาบรรณ และจิตบริการ
-            พร้อมพัฒนาตนเองให้เป็นพยาบาลที่ดีในอนาคต
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- ความสามารถ -->
-        <div class="section-title">
-            ✨ ความสามารถ
-        </div>
-
-        <div class="info">
-            🎤 ร้องเพลง <br>
-            🤝 ทำงานร่วมกับผู้อื่นได้ดี <br>
-            📚 พร้อมเรียนรู้สิ่งใหม่ ๆ
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- งานอดิเรก -->
-        <div class="section-title">
-            ❤️ งานอดิเรก
-        </div>
-
-        <div class="info">
-            🎵 ฟังเพลง <br>
-            🎬 ดูหนัง <br>
-            📖 อ่านหนังสือ <br>
-            🎤 ร้องเพลง
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- คติ -->
-        <div class="section-title">
-            🌷 คติประจำใจ
-        </div>
-
-        <div class="info-center">
-            "ความเมตตา ความรับผิดชอบ <br>
-            และความพยายาม <br>
-            คือก้าวแรกของการเป็นพยาบาลที่ดี"
-        </div>
-
-        <!-- ปุ่ม -->
-        <div class="btn-box">
-            <button class="btn"
-                onclick="location.href='education.html'">
-                หน้าถัดไป ➜
-            </button>
-        </div>
-
-    </div>
+<img src="images/IMG_5994.jpeg" alt="Profile">
 
 </div>
 
+<!-- ชื่อ -->
+
+<div class="name">
+
+🌸 นางสาว จันทกานต์ บางไธสง 🌸
+
+</div>
+
+<div class="school">
+
+นักเรียนชั้นมัธยมศึกษาปีที่ 6/1<br>
+
+โรงเรียนพานทอง
+
+</div>
+
+<div class="line"></div>
+
+<!-- แถวที่ 1 -->
+
+<div class="row">
+
+<!-- ข้อมูลส่วนตัว -->
+
+<div class="box">
+
+<div class="title">
+👩 ข้อมูลส่วนตัว
+</div>
+
+<p>
+
+<b>ชื่อ-นามสกุล :</b><br>
+นางสาว จันทกานต์ บางไธสง
+
+<br><br>
+
+<b>ชื่อเล่น :</b> เอย
+
+<br>
+
+<b>อายุ :</b> 17 ปี
+
+<br>
+
+<b>วันเกิด :</b> 24 มกราคม 2552
+
+<br>
+
+<b>แผนการเรียน :</b><br>
+วิทยาศาสตร์–คณิตศาสตร์
+
+</p>
+
+</div>
+
+<!-- แนะนำตัว -->
+
+<div class="box">
+
+<div class="title">
+💗 แนะนำตัว
+</div>
+
+<p>
+
+เป็นผู้ที่มีความรับผิดชอบ
+
+มีความอดทน
+
+ใส่ใจผู้อื่น
+
+พร้อมเรียนรู้สิ่งใหม่ ๆ
+
+มีความตั้งใจศึกษาต่อ
+
+<b>คณะพยาบาลศาสตร์</b>
+
+เพื่อพัฒนาความรู้
+
+ทักษะ
+
+และจิตบริการ
+
+ในการดูแลผู้ป่วย
+
+</p>
+
+</div>
+
+<!-- ความสามารถ -->
+
+<div class="box">
+
+<div class="title">
+✨ ความสามารถ
+</div>
+
+<p>
+
+🎤 ร้องเพลง
+
+<br><br>
+
+🤝 ทำงานร่วมกับผู้อื่นได้ดี
+
+<br><br>
+
+📚 พร้อมเรียนรู้สิ่งใหม่ ๆ
+
+</p>
+
+</div>
+
+</div>
+
+<div class="line"></div>
+
+<!-- แถวที่ 2 -->
+
+<div class="row">
+
+<!-- งานอดิเรก -->
+
+<div class="box">
+
+<div class="title">
+❤️ งานอดิเรก
+</div>
+
+<p>
+
+🎵 ฟังเพลง
+
+<br>
+
+🎬 ดูหนัง
+
+<br>
+
+📖 อ่านหนังสือ
+
+<br>
+
+🎤 ร้องเพลง
+
+</p>
+
+</div>
+
+<!-- คติ -->
+
+<div class="box">
+
+<div class="title">
+🌸 คติประจำใจ
+</div>
+
+<p style="text-align:center;">
+
+"ความเมตตา
+
+ความรับผิดชอบ
+
+และความพยายาม
+
+คือก้าวแรก
+
+ของการเป็นพยาบาลที่ดี"
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ปุ่ม -->
+
+<div class="btn-area">
+
+<button class="btn"
+
+onclick="location.href='education.html'">
+
+หน้าถัดไป ➜
+
+</button>
+
+</div>
+
+</div>
+
+</div>
 <script>
 
-// สร้างดอกซากุระ
+// ===== ดอกซากุระ =====
 
-for(let i=0;i<25;i++){
+for(let i = 0; i < 25; i++){
 
-    let flower=document.createElement("div");
+    const sakura = document.createElement("div");
 
-    flower.className="sakura";
+    sakura.className = "sakura";
 
-    flower.innerHTML="🌸";
+    sakura.innerHTML = "🌸";
 
-    flower.style.left=Math.random()*100+"vw";
+    sakura.style.left = Math.random() * 100 + "vw";
 
-    flower.style.fontSize=(16+Math.random()*18)+"px";
+    sakura.style.fontSize = (16 + Math.random() * 16) + "px";
 
-    flower.style.animationDuration=(6+Math.random()*5)+"s";
+    sakura.style.animationDuration = (6 + Math.random() * 5) + "s";
 
-    flower.style.animationDelay=Math.random()*5+"s";
+    sakura.style.animationDelay = Math.random() * 5 + "s";
 
-    document.body.appendChild(flower);
+    document.body.appendChild(sakura);
 
 }
 
@@ -439,3 +571,5 @@ for(let i=0;i<25;i++){
 
 </body>
 </html>
+
+        
