@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ประวัติส่วนตัว</title>
+<title>Portfolio | ประวัติส่วนตัว</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -17,44 +15,38 @@
 }
 
 body{
-    background:linear-gradient(135deg,#ffdbe8,#fff6fb,#ffeaf3);
+    background:linear-gradient(135deg,#ffe3ef,#fff8fb,#ffeaf5);
     min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px;
     overflow-x:hidden;
+    padding:40px 20px;
 }
 
-/* กล่องหลัก */
-
 .container{
-    width:900px;
+    max-width:900px;
+    margin:auto;
     text-align:center;
     position:relative;
     z-index:2;
 }
 
-/* หัวข้อ */
-
 h1{
     color:#ff4f96;
-    font-size:55px;
-    margin-bottom:25px;
-    animation:float 3s ease-in-out infinite;
+    font-size:58px;
+    margin-bottom:30px;
+    text-shadow:2px 2px 8px rgba(255,105,180,.2);
 }
 
-/* รูปโปรไฟล์ */
+/* รูป */
 
 .photo-box{
-    width:260px;
-    height:320px;
+    width:270px;
+    height:330px;
     margin:auto;
-    background:#fff;
+    background:white;
     padding:10px;
     border-radius:25px;
-    border:5px solid #ffb6d9;
-    box-shadow:0 10px 20px rgba(255,105,180,.3);
+    border:5px solid #ffb8d7;
+    box-shadow:0 10px 25px rgba(255,105,180,.25);
     position:relative;
     animation:float 3s ease-in-out infinite;
 }
@@ -70,172 +62,222 @@ h1{
     position:absolute;
     top:-15px;
     left:-15px;
-    font-size:35px;
+    font-size:38px;
 }
 
 .flower{
     position:absolute;
     bottom:-15px;
     right:-15px;
-    font-size:35px;
+    font-size:38px;
 }
 
-/* กล่องประวัติ */
+/* กล่อง */
 
 .card{
-    width:650px;
-    margin:35px auto 0;
     background:white;
+    margin:30px auto;
+    width:760px;
     border-radius:25px;
-    padding:30px 40px;
-    box-shadow:0 10px 20px rgba(255,105,180,.25);
-    animation:float 3.5s ease-in-out infinite;
+    padding:28px 40px;
+    box-shadow:0 10px 25px rgba(255,105,180,.2);
+    transition:.3s;
+    animation:float 4s ease-in-out infinite;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(255,105,180,.35);
 }
 
 .card h2{
     color:#ff4f96;
-    font-size:38px;
-    margin-bottom:20px;
+    font-size:40px;
+    margin-bottom:18px;
 }
 
 .card p{
-    font-size:29px;
-    line-height:2;
-    text-align:left;
+    font-size:30px;
+    line-height:1.8;
     color:#555;
+    text-align:left;
+}
+
+.center{
+    text-align:center!important;
 }
 
 /* ปุ่ม */
 
-.next{
-    margin-top:35px;
-}
-
-.next button{
-    width:250px;
-    padding:14px;
+button{
+    width:260px;
+    height:60px;
     border:none;
-    border-radius:30px;
+    border-radius:35px;
     background:#ff70ad;
     color:white;
-    font-size:24px;
+    font-size:28px;
     cursor:pointer;
     transition:.3s;
+    margin:30px 0;
 }
 
-.next button:hover{
+button:hover{
     background:#ff4f96;
     transform:scale(1.05);
 }
 
-/* เอฟเฟกต์ลอย */
+/* ลอย */
 
 @keyframes float{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-8px);
-    }
+
+0%,100%{
+transform:translateY(0);
 }
 
-/* ดอกซากุระ */
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+/* ซากุระ */
 
 .sakura{
-    position:fixed;
-    top:-30px;
-    font-size:22px;
-    pointer-events:none;
-    animation:fall linear infinite;
-    z-index:1;
+position:fixed;
+top:-30px;
+font-size:22px;
+animation:fall linear infinite;
+pointer-events:none;
 }
 
 @keyframes fall{
-    0%{
-        transform:translateY(-30px) rotate(0deg);
-        opacity:1;
-    }
 
-    100%{
-        transform:translateY(110vh) translateX(80px) rotate(360deg);
-        opacity:0;
-    }
+0%{
+transform:translateY(-30px) rotate(0deg);
+opacity:1;
 }
 
-</style>
+100%{
+transform:translateY(110vh) translateX(80px) rotate(360deg);
+opacity:0;
+}
 
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>🌸 ประวัติส่วนตัว 🌸</h1>
+<h1>🌸 ประวัติส่วนตัว 🌸</h1>
 
-    <div class="photo-box">
+<div class="photo-box">
 
-        <span class="cat">🐱</span>
+<span class="cat">🐱</span>
 
-        <!-- เปลี่ยนเป็นชื่อรูปของคุณ -->
-        <img src="images/IMG_5994.jpeg" alt="Profile">
+<img src="images/IMG_5994.jpeg" alt="Profile">
 
-        <span class="flower">🌷</span>
+<span class="flower">🌷</span>
 
-    </div>
+</div>
 
-    <div class="card">
+<div class="card">
 
-        <h2>💗 ข้อมูลส่วนตัว</h2>
+<h2>💗 ข้อมูลส่วนตัว</h2>
 
-        <p>
-            <b>ชื่อ :</b> นางสาว จันทกานต์ บางไธสง <br>
+<p>
 
-            <b>ชื่อเล่น :</b> เอย <br>
+<b>ชื่อ :</b> นางสาว จันทกานต์ บางไธสง <br>
 
-            <b>อายุ :</b> 17 ปี <br>
+<b>ชื่อเล่น :</b> เอย <br>
 
-            <b>วันเกิด :</b> 24 มกราคม 2552 <br>
+<b>อายุ :</b> 17 ปี <br>
 
-            <b>โรงเรียน :</b> โรงเรียนพานทอง <br>
+<b>วันเกิด :</b> 24 มกราคม 2552 <br>
 
-            <b>ชั้น :</b> มัธยมศึกษาปีที่ 6/1 <br>
+<b>โรงเรียน :</b> โรงเรียนพานทอง <br>
 
-            <b>งานอดิเรก :</b> ดูหนัง • ฟังเพลง • อ่านหนังสือ • ร้องเพลง
-        </p>
+<b>ชั้น :</b> มัธยมศึกษาปีที่ 6/1
 
-    </div>
+</p>
 
-    <div class="next">
+</div>
 
-        <button onclick="location.href='education.html'">
-            หน้าถัดไป ➜
-        </button>
+<div class="card">
 
-    </div>
+<h2>🌷 แนะนำตัว</h2>
+
+<p>
+
+ดิฉันเป็นผู้ที่มีความรับผิดชอบ มีความอดทน ใส่ใจผู้อื่น
+และพร้อมเรียนรู้สิ่งใหม่ ๆ อยู่เสมอ มีความมุ่งมั่นที่จะศึกษาต่อ
+<strong>คณะพยาบาลศาสตร์</strong>
+เพื่อพัฒนาความรู้และทักษะในการดูแลผู้ป่วย
+ยึดมั่นในความเมตตา จรรยาบรรณ และการทำงานเป็นทีม
+พร้อมพัฒนาตนเองให้เป็นพยาบาลที่ดีในอนาคต
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>✨ ความสามารถและความสนใจ</h2>
+
+<p>
+
+🎤 ความสามารถพิเศษ : ร้องเพลง <br>
+
+📚 งานอดิเรก : ดูหนัง • ฟังเพลง • อ่านหนังสือ • ร้องเพลง <br>
+
+💖 ความสนใจ : การพยาบาล การดูแลสุขภาพ และการช่วยเหลือผู้อื่น
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🌸 คติประจำใจ</h2>
+
+<p class="center">
+
+"ความเมตตา ความรับผิดชอบ และความพยายาม
+คือก้าวแรกของการเป็นพยาบาลที่ดี"
+
+</p>
+
+</div>
+
+<button onclick="location.href='education.html'">
+
+หน้าถัดไป ➜
+
+</button>
 
 </div>
 
 <script>
 
-// สร้างดอกซากุระ
+for(let i=0;i<55;i++){
 
-for(let i=0;i<50;i++){
+let sakura=document.createElement("div");
 
-    let sakura=document.createElement("div");
+sakura.className="sakura";
 
-    sakura.className="sakura";
+sakura.innerHTML="🌸";
 
-    sakura.innerHTML="🌸";
+sakura.style.left=Math.random()*100+"vw";
 
-    sakura.style.left=Math.random()*100+"vw";
+sakura.style.fontSize=(16+Math.random()*18)+"px";
 
-    sakura.style.fontSize=(16+Math.random()*18)+"px";
+sakura.style.animationDuration=(5+Math.random()*6)+"s";
 
-    sakura.style.animationDuration=(5+Math.random()*5)+"s";
+sakura.style.animationDelay=Math.random()*5+"s";
 
-    sakura.style.animationDelay=Math.random()*5+"s";
-
-    document.body.appendChild(sakura);
+document.body.appendChild(sakura);
 
 }
 
