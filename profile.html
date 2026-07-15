@@ -514,35 +514,6 @@ font-size:22px;
 
 <script>
 
-// ดอกซากุระร่วง
-
-for(let i=0;i<25;i++){
-
-    const flower=document.createElement("div");
-
-    flower.innerHTML="🌸";
-
-    flower.style.position="fixed";
-
-    flower.style.left=Math.random()*100+"vw";
-
-    flower.style.top="-30px";
-
-    flower.style.fontSize=(18+Math.random()*18)+"px";
-
-    flower.style.pointerEvents="none";
-
-    flower.style.zIndex="0";
-
-    flower.style.animation=`fall ${6+Math.random()*5}s linear infinite`;
-
-    flower.style.animationDelay=Math.random()*5+"s";
-
-    document.body.appendChild(flower);
-
-}
-
-</script>
 
 </body>
 </html>
