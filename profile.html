@@ -1,78 +1,65 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ประวัติส่วนตัว</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 <style>
 
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
-font-family:"TH Sarabun New",Tahoma,sans-serif;
+
+font-family:'Noto Sans Thai',sans-serif;
+
 }
 
 body{
 
-background:linear-gradient(135deg,#fff9fc,#ffeef6,#ffe3ef);
-
-min-height:100vh;
+background:linear-gradient(180deg,#fff8fb,#ffeaf4,#ffe2ee);
 
 overflow-x:hidden;
 
-padding:100px 20px 40px;
+padding:80px 20px;
+
+position:relative;
 
 }
 
-/* ดอกซากุระ */
+/* พื้นหลัง */
 
-.sakura{
+body::before{
+
+content:"";
 
 position:fixed;
 
-top:-30px;
+inset:0;
 
-font-size:22px;
+background:
+
+radial-gradient(circle at top,#ffffffaa 0%,transparent 60%);
 
 pointer-events:none;
 
-animation:fall linear infinite;
-
-z-index:1;
-
 }
 
-@keyframes fall{
-
-0%{
-
-transform:translateY(-30px) rotate(0deg);
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(110vh)
-translateX(70px)
-rotate(360deg);
-
-opacity:0;
-
-}
-
-}
-
-/* กล่องใหญ่ */
+/* กล่องหลัก */
 
 .container{
 
-max-width:1100px;
+max-width:1250px;
 
 margin:auto;
 
@@ -84,7 +71,7 @@ z-index:2;
 
 /* การ์ด */
 
-.profile-card{
+.card{
 
 background:rgba(255,255,255,.82);
 
@@ -92,11 +79,13 @@ backdrop-filter:blur(12px);
 
 border-radius:45px;
 
-padding:180px 40px 40px;
+padding:220px 40px 45px;
 
-box-shadow:0 18px 45px rgba(255,182,213,.28);
+box-shadow:
 
-border:2px solid rgba(255,255,255,.8);
+0 15px 40px rgba(255,170,210,.25);
+
+border:2px solid rgba(255,255,255,.7);
 
 position:relative;
 
@@ -104,83 +93,83 @@ position:relative;
 
 /* รูป */
 
-.profile-img{
+.profile{
 
 position:absolute;
 
-top:-110px;
-
 left:50%;
+
+top:-70px;
 
 transform:translateX(-50%);
 
-width:230px;
+width:260px;
 
-height:230px;
+height:260px;
 
-border-radius:50%;
+background:#fff;
 
 padding:8px;
 
-background:white;
+border-radius:50%;
 
-border:6px solid #ffb9d8;
+border:7px solid #ffb8d8;
 
-box-shadow:0 12px 30px rgba(255,105,180,.25);
+box-shadow:0 15px 35px rgba(255,120,180,.3);
 
 }
 
-.profile-img img{
+.profile img{
 
 width:100%;
 
 height:100%;
 
-border-radius:50%;
-
 object-fit:cover;
+
+border-radius:50%;
 
 }
 
 /* ชื่อ */
 
-.name{
+h1{
 
 text-align:center;
 
-font-size:60px;
-
-font-weight:bold;
+font-size:58px;
 
 color:#ff4f96;
 
-margin-top:10px;
+margin-top:20px;
 
 }
 
-.school{
+.sub{
 
 text-align:center;
 
-font-size:33px;
+font-size:31px;
 
 color:#666;
 
-margin-top:8px;
+line-height:1.7;
 
-line-height:1.5;
+margin-top:15px;
 
 }
 
 /* เส้น */
 
-.line{
+hr{
 
-margin:35px 0;
+margin:40px 0;
+
+border:none;
 
 height:2px;
 
-background:#ffd7e7;
+background:#ffd4e7;
 
 }
 
@@ -200,15 +189,15 @@ margin-bottom:25px;
 
 flex:1;
 
-background:rgba(255,255,255,.72);
+background:white;
 
 border-radius:30px;
 
 padding:25px;
 
-border:1px solid #ffe0ee;
+box-shadow:0 8px 18px rgba(255,180,210,.18);
 
-box-shadow:0 8px 18px rgba(255,182,213,.15);
+border:1px solid #ffe3ef;
 
 }
 
@@ -218,29 +207,29 @@ box-shadow:0 8px 18px rgba(255,182,213,.15);
 
 display:inline-block;
 
-padding:8px 22px;
-
-border-radius:30px;
-
-background:#ffb7d5;
+background:linear-gradient(90deg,#ff98c5,#ff6ea9);
 
 color:white;
 
-font-size:30px;
+padding:10px 25px;
 
-font-weight:bold;
-
-margin-bottom:20px;
-
-}
-
-/* ข้อความ */
-
-.box p{
+border-radius:30px;
 
 font-size:28px;
 
-line-height:1.9;
+font-weight:bold;
+
+margin-bottom:18px;
+
+}
+
+/* เนื้อหา */
+
+.box p{
+
+font-size:24px;
+
+line-height:2;
 
 color:#555;
 
@@ -248,15 +237,15 @@ color:#555;
 
 /* ปุ่ม */
 
-.btn-area{
+.next{
 
 text-align:center;
 
-margin-top:35px;
+margin-top:30px;
 
 }
 
-.btn{
+.next button{
 
 width:260px;
 
@@ -266,7 +255,7 @@ border:none;
 
 border-radius:35px;
 
-background:#ff75b0;
+background:#ff78b4;
 
 color:white;
 
@@ -278,7 +267,7 @@ transition:.3s;
 
 }
 
-.btn:hover{
+.next button:hover{
 
 background:#ff4f96;
 
@@ -286,7 +275,7 @@ transform:scale(1.05);
 
 }
 
-/* มือถือ */
+/* Responsive */
 
 @media(max-width:900px){
 
@@ -296,37 +285,35 @@ flex-direction:column;
 
 }
 
-.profile-card{
+.card{
 
-padding:170px 25px 35px;
-
-}
-
-.profile-img{
-
-width:200px;
-
-height:200px;
-
-top:-95px;
+padding:200px 25px 35px;
 
 }
 
-.name{
+.profile{
 
-font-size:48px;
+width:220px;
+
+height:220px;
 
 }
 
-.school{
+h1{
 
-font-size:28px;
+font-size:45px;
+
+}
+
+.sub{
+
+font-size:26px;
 
 }
 
 .box p{
 
-font-size:25px;
+font-size:22px;
 
 }
 
@@ -334,236 +321,224 @@ font-size:25px;
 
 </style>
 
+    
 </head>
 
     <body>
 
 <div class="container">
 
-<div class="profile-card">
+<div class="card">
 
-<!-- รูปโปรไฟล์ -->
+    <!-- รูปโปรไฟล์ -->
+    <div class="profile">
+        <img src="images/IMG_5994.jpeg" alt="Profile">
+    </div>
 
-<div class="profile-img">
+    <!-- ชื่อ -->
+    <h1>🌸 นางสาว จันทกานต์ บางไธสง 🌸</h1>
 
-<img src="images/IMG_5994.jpeg" alt="Profile">
+    <div class="sub">
+        นักเรียนชั้นมัธยมศึกษาปีที่ 6/1 <br>
+        โรงเรียนพานทอง
+    </div>
 
-</div>
+    <hr>
 
-<!-- ชื่อ -->
+    <!-- แถวที่ 1 -->
+    <div class="row">
 
-<div class="name">
+        <!-- ข้อมูลส่วนตัว -->
+        <div class="box">
 
-🌸 นางสาว จันทกานต์ บางไธสง 🌸
+            <div class="title">
+                👩 ข้อมูลส่วนตัว
+            </div>
 
-</div>
+            <p>
 
-<div class="school">
+            <b>ชื่อ-นามสกุล</b><br>
+            นางสาว จันทกานต์ บางไธสง
 
-นักเรียนชั้นมัธยมศึกษาปีที่ 6/1<br>
+            <br><br>
 
-โรงเรียนพานทอง
+            <b>ชื่อเล่น</b> : เอย
 
-</div>
+            <br>
 
-<div class="line"></div>
+            <b>อายุ</b> : 17 ปี
 
-<!-- แถวที่ 1 -->
+            <br>
 
-<div class="row">
+            <b>วันเกิด</b> : 24 มกราคม 2552
 
-<!-- ข้อมูลส่วนตัว -->
+            <br>
 
-<div class="box">
+            <b>แผนการเรียน</b><br>
+            วิทยาศาสตร์–คณิตศาสตร์
 
-<div class="title">
-👩 ข้อมูลส่วนตัว
-</div>
+            </p>
 
-<p>
+        </div>
 
-<b>ชื่อ-นามสกุล :</b><br>
-นางสาว จันทกานต์ บางไธสง
+        <!-- แนะนำตัว -->
 
-<br><br>
+        <div class="box">
 
-<b>ชื่อเล่น :</b> เอย
+            <div class="title">
+                💗 แนะนำตัว
+            </div>
 
-<br>
+            <p>
 
-<b>อายุ :</b> 17 ปี
+            เป็นผู้ที่มีความรับผิดชอบ
 
-<br>
+            มีความอดทน
 
-<b>วันเกิด :</b> 24 มกราคม 2552
+            ใส่ใจผู้อื่น
 
-<br>
+            พร้อมเรียนรู้สิ่งใหม่ ๆ
 
-<b>แผนการเรียน :</b><br>
-วิทยาศาสตร์–คณิตศาสตร์
+            มีความตั้งใจศึกษาต่อ
 
-</p>
+            <b>คณะพยาบาลศาสตร์</b>
 
-</div>
+            เพื่อพัฒนาตนเอง
 
-<!-- แนะนำตัว -->
+            และดูแลผู้ป่วย
 
-<div class="box">
+            ด้วยความเมตตา
 
-<div class="title">
-💗 แนะนำตัว
-</div>
+            </p>
 
-<p>
+        </div>
 
-เป็นผู้ที่มีความรับผิดชอบ
+    </div>
 
-มีความอดทน
+    <!-- แถวที่ 2 -->
 
-ใส่ใจผู้อื่น
+    <div class="row">
 
-พร้อมเรียนรู้สิ่งใหม่ ๆ
+        <!-- ความสามารถ -->
 
-มีความตั้งใจศึกษาต่อ
+        <div class="box">
 
-<b>คณะพยาบาลศาสตร์</b>
+            <div class="title">
+                ✨ ความสามารถ
+            </div>
 
-เพื่อพัฒนาความรู้
+            <p>
 
-ทักษะ
+            🎤 ร้องเพลง
 
-และจิตบริการ
+            <br><br>
 
-ในการดูแลผู้ป่วย
+            🤝 ทำงานร่วมกับผู้อื่นได้ดี
 
-</p>
+            <br><br>
 
-</div>
+            📚 พร้อมเรียนรู้สิ่งใหม่ ๆ
 
-<!-- ความสามารถ -->
+            </p>
 
-<div class="box">
+        </div>
 
-<div class="title">
-✨ ความสามารถ
-</div>
+        <!-- งานอดิเรก -->
 
-<p>
+        <div class="box">
 
-🎤 ร้องเพลง
+            <div class="title">
+                ❤️ งานอดิเรก
+            </div>
 
-<br><br>
+            <p>
 
-🤝 ทำงานร่วมกับผู้อื่นได้ดี
+            🎵 ฟังเพลง
 
-<br><br>
+            <br>
 
-📚 พร้อมเรียนรู้สิ่งใหม่ ๆ
+            🎬 ดูหนัง
 
-</p>
+            <br>
 
-</div>
+            📖 อ่านหนังสือ
 
-</div>
+            <br>
 
-<div class="line"></div>
+            🎤 ร้องเพลง
 
-<!-- แถวที่ 2 -->
+            </p>
 
-<div class="row">
+        </div>
 
-<!-- งานอดิเรก -->
+    </div>
 
-<div class="box">
+    <!-- คติประจำใจ -->
 
-<div class="title">
-❤️ งานอดิเรก
-</div>
+    <div class="box">
 
-<p>
+        <div class="title">
+            🌷 คติประจำใจ
+        </div>
 
-🎵 ฟังเพลง
+        <p style="text-align:center;">
 
-<br>
+        "ความเมตตา ความรับผิดชอบ
+        และความพยายาม
+        คือก้าวแรกของการเป็นพยาบาลที่ดี"
 
-🎬 ดูหนัง
+        </p>
 
-<br>
+    </div>
 
-📖 อ่านหนังสือ
+    <div class="next">
 
-<br>
+        <button onclick="location.href='education.html'">
 
-🎤 ร้องเพลง
+            หน้าถัดไป ➜
 
-</p>
+        </button>
 
-</div>
-
-<!-- คติ -->
-
-<div class="box">
-
-<div class="title">
-🌸 คติประจำใจ
-</div>
-
-<p style="text-align:center;">
-
-"ความเมตตา
-
-ความรับผิดชอบ
-
-และความพยายาม
-
-คือก้าวแรก
-
-ของการเป็นพยาบาลที่ดี"
-
-</p>
+    </div>
 
 </div>
 
 </div>
 
-<!-- ปุ่ม -->
+        <!-- ตกแต่งมุมเว็บ -->
+<div style="position:fixed;top:20px;left:20px;font-size:55px;z-index:1;">🌸</div>
+<div style="position:fixed;top:25px;right:25px;font-size:55px;z-index:1;">🌸</div>
 
-<div class="btn-area">
+<div style="position:fixed;bottom:25px;left:25px;font-size:65px;z-index:1;">🐰🌷</div>
+<div style="position:fixed;bottom:25px;right:25px;font-size:65px;z-index:1;">🌷🐰</div>
 
-<button class="btn"
-
-onclick="location.href='education.html'">
-
-หน้าถัดไป ➜
-
-</button>
-
-</div>
-
-</div>
-
-</div>
 <script>
 
-// ===== ดอกซากุระ =====
+// ดอกซากุระร่วง
 
-for(let i = 0; i < 25; i++){
+for(let i=0;i<25;i++){
 
-    const sakura = document.createElement("div");
+    const flower=document.createElement("div");
 
-    sakura.className = "sakura";
+    flower.innerHTML="🌸";
 
-    sakura.innerHTML = "🌸";
+    flower.style.position="fixed";
 
-    sakura.style.left = Math.random() * 100 + "vw";
+    flower.style.left=Math.random()*100+"vw";
 
-    sakura.style.fontSize = (16 + Math.random() * 16) + "px";
+    flower.style.top="-30px";
 
-    sakura.style.animationDuration = (6 + Math.random() * 5) + "s";
+    flower.style.fontSize=(18+Math.random()*18)+"px";
 
-    sakura.style.animationDelay = Math.random() * 5 + "s";
+    flower.style.pointerEvents="none";
 
-    document.body.appendChild(sakura);
+    flower.style.zIndex="0";
+
+    flower.style.animation=`fall ${6+Math.random()*5}s linear infinite`;
+
+    flower.style.animationDelay=Math.random()*5+"s";
+
+    document.body.appendChild(flower);
 
 }
 
