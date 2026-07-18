@@ -5,33 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ช่องทางการติดต่อ</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Mali',cursive;
 }
 
 body{
+    font-family:"TH Sarabun New",Tahoma,sans-serif;
+    background:linear-gradient(135deg,#ffe3ef,#fff7fb,#ffeef6);
     overflow-x:hidden;
     min-height:100vh;
-    background:linear-gradient(180deg,#ffd6ec,#ffeaf5,#fff7fb);
-    position:relative;
 }
 
-/* หิมะ */
+/* หิมะตก */
 .snow{
     position:fixed;
     top:-10px;
-    width:8px;
-    height:8px;
-    background:white;
-    border-radius:50%;
-    opacity:.8;
+    color:white;
+    user-select:none;
     animation:fall linear infinite;
+    z-index:0;
+    opacity:0.9;
 }
 
 @keyframes fall{
@@ -40,164 +36,186 @@ body{
     }
 }
 
-/* หัวข้อ */
-h1{
-    text-align:center;
-    margin-top:40px;
-    color:#ff4f93;
-    font-size:42px;
-    text-shadow:2px 2px white;
-}
-
-/* กระต่าย */
-.rabbit{
-    text-align:center;
-    font-size:70px;
-    animation:bounce 2s infinite;
-}
-
-@keyframes bounce{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
-}
-
-/* กล่อง */
 .container{
     width:90%;
     max-width:700px;
-    margin:30px auto;
+    margin:40px auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    color:#ff5f9d;
+    font-size:55px;
+    margin-bottom:25px;
+    text-shadow:2px 2px white;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+.photo{
+    width:230px;
+    height:230px;
+    object-fit:cover;
+    border-radius:25px;
+    border:6px solid white;
+    box-shadow:0 10px 25px rgba(255,105,180,.3);
+    margin-bottom:25px;
+    transition:.4s;
+}
+
+.photo:hover{
+    transform:scale(1.05) rotate(2deg);
 }
 
 .card{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(255,182,193,.4);
+    animation:updown 3s ease-in-out infinite;
+}
+
+@keyframes updown{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.contact-box{
     background:white;
     margin:20px 0;
-    border-radius:25px;
-    padding:22px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(255,153,204,.35);
+    padding:18px;
+    border-radius:20px;
     transition:.35s;
-    border:3px solid #ffd0e6;
+    box-shadow:0 5px 15px rgba(255,182,193,.35);
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.contact-box:hover{
+    transform:scale(1.03);
+    background:#fff3f8;
 }
 
-.card:active{
-    transform:translateY(6px);
-}
-
-.card a{
-    text-decoration:none;
-    color:#ff4f93;
-    font-size:24px;
+.contact-box p{
+    font-size:30px;
+    color:#ff4f96;
     font-weight:bold;
 }
 
-.icon{
-    font-size:45px;
-    display:block;
-    margin-bottom:10px;
+.contact-box a{
+    text-decoration:none;
+    color:#666;
+    font-size:28px;
 }
 
-/* ปุ่ม */
-.home{
-    display:block;
-    width:220px;
-    margin:45px auto;
-    text-align:center;
-    text-decoration:none;
-    background:#ff8fbe;
+.contact-box a:hover{
+    color:#ff4f96;
+}
+
+.home-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 38px;
+    background:#ff8fbd;
     color:white;
-    padding:15px;
-    border-radius:40px;
-    font-size:20px;
-    font-weight:bold;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:28px;
     transition:.3s;
-    box-shadow:0 6px 15px rgba(255,105,180,.4);
+    box-shadow:0 6px 18px rgba(255,105,180,.35);
 }
 
-.home:hover{
-    background:#ff5ea3;
-    transform:scale(1.05);
+.home-btn:hover{
+    background:#ff5f9d;
+    transform:translateY(-5px);
 }
 
 .footer{
-    text-align:center;
-    color:#ff75aa;
-    margin-bottom:25px;
-    font-size:18px;
+    margin-top:20px;
+    color:#ff7ea8;
+    font-size:24px;
 }
 </style>
 
 </head>
 <body>
 
-<div class="rabbit">🐰🎀</div>
-
-<h1>ช่องทางการติดต่อ</h1>
-
 <div class="container">
 
-<div class="card">
-<span class="icon">📘</span>
-<a href="https://https://www.facebook.com/chanthakan.bangthaisong?/" target="_blank">
-Facebook
-</a>
-</div>
+<h1>💌 ช่องทางการติดต่อ 💌</h1>
+
+<img src="contact.jpg" class="photo" alt="รูปภาพ">
 
 <div class="card">
-<span class="icon">📷</span>
-<a href="https://https://www.instagram.com/ingoey_?igsh=bm51dTExYWU1eDNu&utm_source=qr/" target="_blank">
-Instagram
+
+<div class="contact-box">
+<p>📷 Instagram</p>
+
+<!-- เปลี่ยน yourusername เป็นชื่อไอจี -->
+<a href="https://instagram.com/yourusername" target="_blank">
+@yourusername
 </a>
+
 </div>
 
-<div class="card">
-<span class="icon">💚</span>
-<a href="https://https://line.me/ti/p/TabhQGpLnk/" target="_blank">
-LINE
+<div class="contact-box">
+
+<p>📧 E-mail</p>
+
+<!-- เปลี่ยนอีเมลของตัวเอง -->
+<a href="mailto:yourmail@gmail.com">
+yourmail@gmail.com
 </a>
-</div>
-
-<div class="card">
-<span class="icon">🎵</span>
-<a href="https://https://www.tiktok.com/@ingoeys?_r=1&_t=ZS-97yM6ASVV6F/" target="_blank">
-TikTok
-</a>
-</div>
 
 </div>
 
-<a href="index.html" class="home">
+<a href="index.html" class="home-btn">
 🏠 กลับหน้าหลัก
 </a>
 
+</div>
+
 <div class="footer">
-🐰 Thank you for visiting my website 💕
+🌸 Thank you for visiting 🌸
+</div>
+
 </div>
 
 <script>
-// สร้างหิมะ
-for(let i=0;i<80;i++){
+function createSnow(){
 
-let snow=document.createElement("div");
+const snow=document.createElement("div");
 
-snow.className="snow";
+snow.classList.add("snow");
 
-snow.style.left=Math.random()*100+"vw";
+snow.innerHTML="❄";
+
+snow.style.left=Math.random()*window.innerWidth+"px";
+
+snow.style.fontSize=(10+Math.random()*20)+"px";
 
 snow.style.animationDuration=(4+Math.random()*6)+"s";
 
 snow.style.opacity=Math.random();
 
-snow.style.width=snow.style.height=(4+Math.random()*8)+"px";
-
-snow.style.animationDelay=Math.random()*5+"s";
-
 document.body.appendChild(snow);
 
+setTimeout(()=>{
+snow.remove();
+},10000);
+
 }
+
+setInterval(createSnow,180);
 </script>
 
 </body>
